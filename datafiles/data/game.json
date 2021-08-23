@@ -1,0 +1,17 @@
+{
+    "owmenu.love":"LV",
+    "owmenu.hp":"HP",
+    "owmenu.hpvalues":"{$0}/{$1}",
+    "owmenu.at":"AT",
+    "owmenu.df":"DF",
+    "owmenu.gold":"G",
+    "owmenu.gold_alt":"GOLD",
+    "owmenu.weapon":"WEAPON",
+    "owmenu.armor":"ARMOR",
+    "owmenu.exp":"EXP",
+    "owmenu.next":"NEXT",
+    "owmenu.item":"ITEM",
+    "owmenu.stat":"STAT",
+    "owmenu.cell":"CELL",
+    "owmenu.contacts.papyrus.0":[["cutscene_run_text", "* HELLO THERE MY GUY"],["cutscene_run_text", "* SANS PICK UP YOUR SOCK!!!!"]]
+}

@@ -1,5 +1,12 @@
 /// @description Functionality
 
+var menu = obj_overworldmenu;
+if (key_ctrl_press && menu.mainState == 0 && !global.enable_fading_scene) {
+	menu.active = !menu.active;
+	global.canmove = !global.canmove;
+	audio_play_sound(snd_menumove, 10, false);
+}
+
 // Are we able to move?
 if (global.canmove) {
 	var u = key_up, d = key_down, l = key_left, r = key_right;				// Adjust the keys

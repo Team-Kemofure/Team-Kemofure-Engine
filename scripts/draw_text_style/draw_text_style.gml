@@ -5,7 +5,7 @@
 /// @arg font
 /// @arg charWidth
 /// @arg charHeight
-/// @description Writes out text with its own commands
+/// Writes out text with its own commands
 
 var _x = argument[0];			// The X position of the text
 var _y = argument[1];			// The Y position of the text

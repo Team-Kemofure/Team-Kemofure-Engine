@@ -1,7 +1,7 @@
 /// @param volume
 /// @param pitch
 /// @param loop
-/// @description Plays a music file from the included files
+/// Plays a music file from the included files
 
 if (global.currentmusic == -1)
 	show_error("Error! Initialize the current music first.", true);

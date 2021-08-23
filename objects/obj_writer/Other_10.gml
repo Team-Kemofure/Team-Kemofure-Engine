@@ -24,16 +24,19 @@ if (internalPos < len)
 			break;
 		default:
 			internalStr += char;
-		
-			if (voice != noone)
-			{
+			if (voice != noone) {
 				for (var i = 0; i < array_length_1d(voice); i++)
 					audio_stop_sound(voice[i]);
-				audio_play_sound(voice[random(array_length_1d(voice))], 8, false);
+				if (char != " ")
+					audio_play_sound(voice[random(array_length_1d(voice))], 8, false);
 			}
 			pauseTimer = textSpeed;
 			break;
 	}
+	if (skip)
+		event_user(0);
 }
-else
+else {
 	completed = true;
+	skip = false;
+}

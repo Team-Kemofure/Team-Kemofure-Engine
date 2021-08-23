@@ -3,7 +3,7 @@
 /// @param targetAlpha
 /// @param duration
 /// @param fadeMusic
-/// @description Changes the value of the fader
+/// Changes the value of the fader
 
 var fader = -1;
 if (!instance_exists(fader) || fader == -1)
