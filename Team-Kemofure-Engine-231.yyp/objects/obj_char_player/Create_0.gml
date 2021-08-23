@@ -1,8 +1,5 @@
 /// @description Initialization
 
-currDir = dir_down;			// The direction we're facing
-moveSpeed = 3;				// Our movement speed
-
 image_index = 0;			// Reset the image index
 image_speed = 0;			// Reset the image speed
 

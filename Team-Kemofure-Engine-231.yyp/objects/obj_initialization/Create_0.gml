@@ -24,6 +24,7 @@ global.enable_fading_scene = false;				// Should we enable the fading scene?
 global.entrance_on_room_start = -1;				// The entrance we're going to spawn on at the start of the room
 global.direction_on_room_start = dir_down;		// The direction that we're going to face to at the start of the room
 global.localization = lang_load("game");		// Initialize the localization
+global.cutscenejson = lang_load("cutscenes");	// Initialize the cutscene JSON
 global.textformat = [];							// Text formatting
 global.auto_skip_upon_dialogue_end = false;		// Should the dialogue auto-skip upon end?
 
@@ -38,4 +39,3 @@ instance_create_depth(0, 0, 0, obj_cutscenehandler);
 instance_create_depth(0, 0, 0, obj_overworldmenu);
 instance_create_depth(0, 0, 0, obj_overworldui);
 call_list_add("Call Papyrus", "owmenu.contacts.papyrus.0");
-call_list_add("Call Toriel", "owmenu.contacts.toriel.0");

@@ -1,3 +1,17 @@
+/// Ends the current cutscene action
+function cutscene_end_action() {
+	with (obj_cutscenehandler) {
+		if (sceneInfo != -1) {
+			if (scene < array_length(sceneInfo) - 1)
+				scene++;
+			else {
+				scene = 0;
+				sceneInfo = -1;
+			}
+		}
+	}
+}
+
 /// Waits for a given amount of seconds
 function cutscene_wait(seconds) {
 	with (obj_cutscenehandler) {
@@ -5,20 +19,6 @@ function cutscene_wait(seconds) {
 		if (timer >= real(seconds) * room_speed) {
 			cutscene_end_action();
 			timer = 0;
-		}
-	}
-}
-
-/// Ends the current cutscene action
-function cutscene_end_action() {
-	with (obj_cutscenehandler) {
-		if (sceneInfo != -1) {
-			if (scene < array_length(sceneInfo[scene]) - 1)
-				scene++;
-			else {
-				scene = 0;
-				sceneInfo = -1;
-			}
 		}
 	}
 }
@@ -49,29 +49,42 @@ function cutscene_play_sfx(soundid) {
 	return sound;
 }
 
+function cutscene_move_character(targetX, targetY, imageSpeed) {
+	
+}
+
 /// Creates a dialogue box with the given arguments
-function cutscene_run_text(msg, sound, font) {
+function cutscene_text_settings(sound, textType) {
+	with (obj_overworldui) {	
+		var finalized = [];
+		for (var i = 0; i < array_length(sound); i++) {
+			finalized[i] = asset_get_index(sound[i]);
+		}
+
+		self.sound = finalized;
+		if (!is_undefined(textType))
+			self.textType = real(textType);
+	}
+	cutscene_end_action();
+}
+
+/// Creates a dialogue box with the given arguments
+function cutscene_run_text(msg, portrait) {
 	with (obj_overworldui) {
 		if (state == 0) && ((writer == -1) || (!instance_exists(writer))) {
-			state = 1;
-	
-			internalStr = msg;
-			self.sound = [snd_voice_default];
-			self.font = fnt_main;
-	
-			// Check if optional arguments are given
-			if (argument_count > 1) {
-				sound = argument[1];
-				if (argument_count > 2)
-					font = argument[2];
-			}
-	
+			internalStr = lang_raw(msg, global.localization);
+			
+			// Initialize the writer
 			writer = instance_create_depth(0, 0, 0, obj_writer);
+			writer.voice = [snd_voice_default];
 			writer.msg = internalStr;
-			writer.sound = sound;
-			writer.font = font;
 			writer.draw = false;
-	
+			
+			// Check if optional arguments are given
+			if (!is_undefined(portrait))
+				portraitSprite = asset_get_index(portrait);
+			
+			state = 1;
 			if (!global.scene)
 				global.canmove = false;
 		}

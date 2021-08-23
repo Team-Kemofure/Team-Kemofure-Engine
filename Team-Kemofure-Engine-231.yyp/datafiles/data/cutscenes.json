@@ -1,0 +1,14 @@
+{
+    "owmenu.contacts.papyrus.0" : [
+        ["cutscene_play_sfx", "snd_phone_ring"],
+        ["cutscene_wait", "1"],
+        ["cutscene_run_text", "call.ringing"],
+        ["cutscene_text_settings", ["snd_voice_papyrus"], "2"],
+        ["cutscene_run_text", "call.contacts.papyrus.0.0", "spr_papface_normal"],
+        ["cutscene_run_text", "call.contacts.papyrus.0.1", "spr_papface_doubt"],
+        ["cutscene_run_text", "call.contacts.papyrus.0.2", "spr_papface_normal"],
+        ["cutscene_run_text", "call.contacts.papyrus.0.3", "spr_papface_mad"],
+        ["cutscene_text_settings", ["snd_voice_default"], "0"],
+        ["cutscene_run_text", "call.end"]
+    ]
+}

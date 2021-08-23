@@ -80,7 +80,7 @@ switch (mainState) {
 		
 			// Calling someone from our contacts
 			if (key_enter_press) {
-				cutscene_create(lang_array(ds_list_find_value(contactList, selection)));
+				cutscene_create(lang_array(ds_list_find_value(contactList, selection), global.cutscenejson));
 				subState = 1;
 			}
 		}

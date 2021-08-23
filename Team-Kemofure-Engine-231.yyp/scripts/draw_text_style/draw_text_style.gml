@@ -5,9 +5,10 @@
 /// @arg font
 /// @arg charWidth
 /// @arg charHeight
+/// @arg effect
+/// @arg scale
 /// Writes out text with its own commands
 function draw_text_style() {
-
 	var _x = argument[0];			// The X position of the text
 	var _y = argument[1];			// The Y position of the text
 	var beginX = _x;				// The initialized X position of the text
@@ -18,6 +19,7 @@ function draw_text_style() {
 	var charWidth = 8;				// The character width
 	var charHeight = 18;			// The character height
 	var effect = -1;				// The current text effect
+	var scale = 1;					// The text scale
 	var len = string_length(msg);	// The length the message has
 
 	if (argument_count > 3) {
@@ -30,6 +32,9 @@ function draw_text_style() {
 					charHeight = argument[6];
 					if (argument_count > 7) {
 						effect = argument[7];
+						if (argument_count > 8) {
+							scale = argument[8];
+						}
 					}
 				}
 			}
@@ -74,16 +79,14 @@ function draw_text_style() {
 				switch (effect) {
 					case 0:
 					default: // Default
-						draw_text(_x, _y, char);
+						draw_text_transformed(_x, _y, char, scale, scale, 0);
 						break;
 					case 1: // Shaky
-						draw_text(_x + irandom(1), _y + irandom(1), char);
+						draw_text_transformed(_x + irandom(1), _y + irandom(1), char, scale, scale, 0);
 						break;
 				}
 				_x += charWidth;
 				break;
 		}
 	}
-
-
 }
