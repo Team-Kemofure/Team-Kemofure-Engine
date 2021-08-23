@@ -1,1 +1,0 @@
-cutscene_run_text("* Sex 2 is`p1` coming soon...", snd_voice_default, fnt_main);
