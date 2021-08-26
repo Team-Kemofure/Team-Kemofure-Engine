@@ -46,6 +46,23 @@ switch (mainState) {
 		// Draw the heart for indicating the selection
 		draw_sprite_ext(spr_heartsmall, 0, 56, 196 + (36 * selection), 2, 2, 0, c_white, 1);
 		break;
+	case 1:
+		if (subState != 2) {
+			draw_menu_rectangle(188, 52, 533, 413, 6); // Initialize the box
+			if (subState == 0)
+				draw_sprite_ext(spr_heartsmall, 0, 208, 88 + (32 * selection), 2, 2, 0, c_white, 1); // Draw the heart for indicating the selection
+			else if (subState == 1)
+				draw_sprite_ext(spr_heartsmall, 0, 208 + (selection == 1 ? 96 : (selection == 2 ? 210 : 0)), 368, 2, 2, 0, c_white, 1); // Draw the heart for indicating the selection
+			
+			draw_set_color(c_white);
+			for (var i = 0; i < ds_list_size(global.inv_item); i++)
+				draw_text(232, 80 + (32 * i), item_get_name(ds_list_find_value(global.inv_item, i)));
+			// Item actions
+			draw_text(232, 360, lang_array("item.actions", global.itemjson)[0]);
+			draw_text(328, 360, lang_array("item.actions", global.itemjson)[1]);
+			draw_text(442, 360, lang_array("item.actions", global.itemjson)[2]);
+		}
+		break;
 	case 2:
 		draw_menu_rectangle(188, 52, 533, 469, 6); // Initialize the box
 		draw_set_color(c_white);

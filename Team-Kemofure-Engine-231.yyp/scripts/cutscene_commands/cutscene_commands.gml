@@ -72,7 +72,7 @@ function cutscene_text_settings(sound, textType) {
 function cutscene_run_text(msg, portrait) {
 	with (obj_overworldui) {
 		if (state == 0) && ((writer == -1) || (!instance_exists(writer))) {
-			internalStr = lang_raw(msg, global.localization);
+			internalStr = format_text_basic(lang_raw(msg, global.localization));
 			
 			// Initialize the writer
 			writer = instance_create_depth(0, 0, 0, obj_writer);

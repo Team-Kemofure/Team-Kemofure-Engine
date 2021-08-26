@@ -1,10 +1,9 @@
 /// @param text
 /// @param punctuation*
 /// @param asterisk*
+/// Formats dialogue with timing and asterisk newlines (Code directly taken from TS!US)
+
 function format_text_basic() {
-
-	/// Formats dialogue with timing and asterisk newlines (Code directly taken from TS!US)
-
 	var in = argument[0];
 	var out = "";
 	var punc = true;
@@ -23,7 +22,7 @@ function format_text_basic() {
 	for (var i = 1; i <= len; i++)
 	{
 	    var currChar = string_char_at(in, i);
-	    if (state == 2 && (currChar == "\\" || currChar == "{"))
+	    if (state == 2 && (currChar == "\\" || currChar == "`"))
 	        state = 0;
 	    switch (state)
 	    {
@@ -44,7 +43,7 @@ function format_text_basic() {
 	                    else
 	                        out += currChar;
 	                    break;
-	                case "{":
+	                case "`":
 	                    var _con = (i + 1) <= len;
 	                    var nc;
 	                    if (_con)
@@ -53,19 +52,19 @@ function format_text_basic() {
 	                        state = 4;
 	                    else if (_con && nc == "@")
 	                    {
-	                        out += "}";
+	                        out += "`";
 	                        punc = !punc;
 	                    } else
 	                    {
-	                        out += "}";
+	                        out += "`";
 	                        state = 3;
 	                    }
 	                    break;
 	                default:
 	                    out += currChar;
-	                    if (punc && in_array(global.lang_punctuation, currChar))
+	                    if (punc && in_array([".", ",", ":", ";", "!", "?"], currChar))
 	                    {
-	                        isPeriod = (currChar == global.lang_period);
+	                        isPeriod = (currChar == ".");
 	                        state = 2;
 	                    }
 	                    break;
@@ -73,7 +72,7 @@ function format_text_basic() {
 	            break;
 	        case 1: // Asterisk newline check
 	            state = 0;
-	            if (currChar == global.lang_asterisk)
+	            if (currChar == "*")
 	            {
 	                out += "#" + currChar;
 	            } else
@@ -84,7 +83,7 @@ function format_text_basic() {
 	            }
 	            break;
 	        case 2: // Punctuation add pause
-	            if (!in_array(global.lang_punctuation, currChar))
+	            if (!in_array([".", ",", ":", ";", "!", "?"], currChar))
 	            {
 	                if (isPeriod && currChar != " ")
 	                {
@@ -120,6 +119,4 @@ function format_text_basic() {
 	}
 
 	return out;
-
-
 }

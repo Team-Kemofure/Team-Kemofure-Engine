@@ -2,7 +2,7 @@
 
 // Global variables for statistics regarding about the player
 global.playername = "Chara";					// Our name
-global.playerhp = 20;							// Our current HP
+global.playerhp = -99;							// Our current HP
 global.playermaxhp = 20;						// Our maximum capacity of HP
 global.playerlv = 1;							// Our LV gained with EXP
 global.playergold = 0;							// Our gold
@@ -12,8 +12,10 @@ global.playernext = 10;							// Our target EXP for the next level
 global.playerat = 10;							// Our strength of attacking
 global.playerwepat = 0;							// Our weapon's strength of attacking
 
-global.playerdf = 10;							// Oursstrength of defending
+global.playerdf = 10;							// Our strength of defending
 global.playerarmdf = 0;							// Our armor's strength of defending
+
+global.inv_item = ds_list_create();				// Our inventory
 
 // Global variables for other things
 global.scene = false;							// Are we currently in a scene?
@@ -25,6 +27,7 @@ global.entrance_on_room_start = -1;				// The entrance we're going to spawn on a
 global.direction_on_room_start = dir_down;		// The direction that we're going to face to at the start of the room
 global.localization = lang_load("game");		// Initialize the localization
 global.cutscenejson = lang_load("cutscenes");	// Initialize the cutscene JSON
+global.itemjson = lang_load("items");			// Initialize the item JSON
 global.textformat = [];							// Text formatting
 global.auto_skip_upon_dialogue_end = false;		// Should the dialogue auto-skip upon end?
 
@@ -39,3 +42,4 @@ instance_create_depth(0, 0, 0, obj_cutscenehandler);
 instance_create_depth(0, 0, 0, obj_overworldmenu);
 instance_create_depth(0, 0, 0, obj_overworldui);
 call_list_add("Call Papyrus", "owmenu.contacts.papyrus.0");
+item_add("item.consumables.monstercandy");

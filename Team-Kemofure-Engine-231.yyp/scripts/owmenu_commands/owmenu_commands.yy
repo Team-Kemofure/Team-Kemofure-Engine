@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Items, Armors & Cell",
-    "path": "folders/Scripts/Gameplay/Items, Armors & Cell.yy",
+    "name": "Player",
+    "path": "folders/Scripts/Gameplay/Player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "call_list_add",
+  "name": "owmenu_commands",
   "tags": [],
   "resourceType": "GMScript",
 }

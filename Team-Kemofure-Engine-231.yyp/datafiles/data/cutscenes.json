@@ -10,5 +10,9 @@
         ["cutscene_run_text", "call.contacts.papyrus.0.3", "spr_papface_mad"],
         ["cutscene_text_settings", ["snd_voice_default"], "0"],
         ["cutscene_run_text", "call.end"]
+    ],
+    "owmenu.actions.item.use" : [
+        ["cutscene_play_sfx", "snd_power"],
+        ["cutscene_text_settings", ["snd_voice_default"], "0"]
     ]
 }
