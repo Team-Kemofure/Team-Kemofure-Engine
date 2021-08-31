@@ -15,4 +15,4 @@
 
 <hr>
 
-<h6 align="center">Team Kemofure (2020-2021)</h6>
+<h6 align="center">Team Kemofure (2021-2021)</h6>
