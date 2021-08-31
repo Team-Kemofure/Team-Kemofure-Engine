@@ -1,7 +1,6 @@
 {
     "owmenu.love" : "LV",
     "owmenu.hp" : "HP",
-    "owmenu.hpvalues" : "{$0}/{$1}",
     "owmenu.at" : "AT",
     "owmenu.df" : "DF",
     "owmenu.gold" : "G",
@@ -10,19 +9,33 @@
     "owmenu.armor" : "ARMOR",
     "owmenu.exp" : "EXP",
     "owmenu.next" : "NEXT",
+
     "owmenu.item" : "ITEM",
     "owmenu.stat" : "STAT",
     "owmenu.cell" : "CELL",
+
+    "item.actions" : ["USE", "INFO", "DROP"],
+
+    "item.consumables.monstercandy.name" : "Monster Candy",
+    "item.info.monstercandy" : "* \"Monster Candy\" - Heals `$0` HP#* Has a distinct,#  non licorice flavor.",
+
+    "item.weapons.stick.name" : "Stick",
+    "item.info.stick" : "* You threw the stick,#  then picked it up.",
+
+    "item.weapons.toyknife.name" : "Toy Knife",
+    "item.info.toyknife" : "* Toy Knife - Weapon AT 3 * Made of plastic. * A rarity nowadays.",
+
     "item.use.heal.part" : "* You ate the `$0`.#* You recovered `$1` HP!",
     "item.use.heal.all" : "* You ate the `$0`.#* Your HP was maxed out.",
     "item.equip" : "* You equipped the `$0`",
-    "item.drop" : [
-        "* The `$0` was#  thrown away.",
-        "* You bid a quiet farewell#  to the {$0}.",
-        "* You put the `$0`#  on the ground and gave it a#  little pat.",
-        "* You threw the `$0`#  on the ground like a piece#  of trash it is.",
-        "* You abandoned the#  {$0}."
-    ],
+    
+    "item.drop.0" : "* The `$0` was#  thrown away.",
+    "item.drop.1" : "* You bid a quiet farewell#  to the `$0`.",
+    "item.drop.2" : "* You put the `$0`#  on the ground and gave it a#  little pat.",
+    "item.drop.3" : "* You threw the `$0`#  on the ground like a piece#  of trash it is.",
+    "item.drop.4" : "* You abandoned the#  `$0`.",
+    "item.drop.warn" : "* You can't drop this item#  right now. * Maybe you'll need it later?",
+
     "call.ringing" : "* (Ring,`p1` ring...)",
     "call.end" : "* (Click.)",
     "call.contacts.papyrus.0.0" : "HELLO HUMAN!`p1`#IT IS I,`p1` THE#GREAT PAPYRUS!",

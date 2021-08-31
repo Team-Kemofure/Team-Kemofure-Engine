@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Localization",
-    "path": "folders/Scripts/Utility/Localization.yy",
+    "name": "Player",
+    "path": "folders/Scripts/Gameplay/Player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "lang_load",
+  "name": "gear_utils",
   "tags": [],
   "resourceType": "GMScript",
 }

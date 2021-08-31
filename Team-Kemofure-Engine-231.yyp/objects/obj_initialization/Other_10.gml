@@ -6,3 +6,13 @@
 #macro dir_right 3
 
 #macro DEBUG false
+
+enum WEAPON {
+	STICK,
+	TOY_KNIFE
+}
+
+enum ARMOR {
+	BANDAGE,
+	FADED_RIBBON
+}

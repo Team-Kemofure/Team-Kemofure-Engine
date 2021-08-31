@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Localization",
-    "path": "folders/Scripts/Utility/Localization.yy",
+    "name": "JSON's",
+    "path": "folders/Scripts/Utility/JSON's.yy",
   },
   "resourceVersion": "1.0",
-  "name": "lang_array",
+  "name": "json_utils",
   "tags": [],
   "resourceType": "GMScript",
 }

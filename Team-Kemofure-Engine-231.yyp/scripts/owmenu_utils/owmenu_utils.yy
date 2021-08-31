@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Gameplay/Player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "owmenu_commands",
+  "name": "owmenu_utils",
   "tags": [],
   "resourceType": "GMScript",
 }

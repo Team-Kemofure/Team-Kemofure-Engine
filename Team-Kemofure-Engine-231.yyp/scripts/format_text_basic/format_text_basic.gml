@@ -1,7 +1,7 @@
 /// @param text
 /// @param punctuation*
 /// @param asterisk*
-/// Formats dialogue with timing and asterisk newlines (Code directly taken from TS!US)
+/// Formats dialogue with timing and asterisk newlines (Prototype code, will be remade later)
 
 function format_text_basic() {
 	var in = argument[0];
