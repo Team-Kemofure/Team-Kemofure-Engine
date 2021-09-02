@@ -4,6 +4,7 @@ if (delay > 0)
 	delay--;
 
 if (state == 1) {
+	showBox = true; // Show the dialogue box
 	writer.voice = sound;
 	if (!writer.completed) {
 		if (key_shift_press) {
@@ -22,6 +23,7 @@ if (state == 1) {
 			delay = 3;
 			state = 0;
 			
+			alarm[1] = 2;
 			if (!global.scene) && (!obj_overworldmenu.active)
 				global.canmove = true;
 		}

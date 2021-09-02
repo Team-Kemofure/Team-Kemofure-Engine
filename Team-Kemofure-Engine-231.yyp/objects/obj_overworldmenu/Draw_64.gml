@@ -64,20 +64,23 @@ switch (mainState) {
 		}
 		break;
 	case 2:
+		var weapon = weapon_get_info(global.playerstats.weapon);
+		var armor = armor_get_info(global.playerstats.armor);
+		
 		draw_menu_rectangle(188, 52, 533, 469, 6); // Initialize the box
 		draw_set_color(c_white);
 		draw_text(216, 85, format_text_basic("\"" + global.playerstats.name + "\"", false, false));
 		draw_text(216, 145, format_text_basic(json_raw("owmenu.love", global.localization) + "  " + string(global.playerstats.level), false, false));
 		draw_text(216, 177, format_text_basic(json_raw("owmenu.hp", global.localization) + "  " + string(global.playerstats.hp[0]) + " / " + string(global.playerstats.hp[1]), false, false));
 		
-		draw_text(216, 241, format_text_basic(json_raw("owmenu.at", global.localization) + "  " + string(global.playerstats.attack - 10) + " (" + string(ceil(global.playerstats.weapon_attack)) + ")", false, false));
+		draw_text(216, 241, format_text_basic(json_raw("owmenu.at", global.localization) + "  " + string(global.playerstats.attack - 10) + " (" + string(ceil(weapon.strength)) + ")", false, false));
 		draw_text(384, 241, format_text_basic(json_raw("owmenu.exp", global.localization) + ": " + string(global.playerstats.experience), false, false));
 		
-		draw_text(216, 273, format_text_basic(json_raw("owmenu.df", global.localization) + "  " + string(global.playerstats.defense - 10) + " (" + string(ceil(global.playerstats.armor_defense)) + ")", false, false));
+		draw_text(216, 273, format_text_basic(json_raw("owmenu.df", global.localization) + "  " + string(global.playerstats.defense - 10) + " (" + string(ceil(armor.strength)) + ")", false, false));
 		draw_text(384, 273, format_text_basic(json_raw("owmenu.next", global.localization) + ": " + string(global.playerstats.next), false, false));
 		
-		draw_text(216, 333, format_text_basic(json_raw("owmenu.weapon", global.localization) + ": " + "UNDEFINED", false, false));
-		draw_text(216, 365, format_text_basic(json_raw("owmenu.armor", global.localization) + ": " + "UNDEFINED", false, false));
+		draw_text(216, 333, format_text_basic(json_raw("owmenu.weapon", global.localization) + ": " + string(weapon_get_name(global.playerstats.weapon)), false, false));
+		draw_text(216, 365, format_text_basic(json_raw("owmenu.armor", global.localization) + ": " + string(armor_get_name(global.playerstats.armor)), false, false));
 		draw_text(216, 405, format_text_basic(json_raw("owmenu.gold_alt", global.localization) + ": " + string(global.playerstats.gold), false, false));
 		break;
 	case 3:

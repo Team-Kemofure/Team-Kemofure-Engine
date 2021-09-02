@@ -53,8 +53,8 @@
 	function armor_get_name() {
 		switch (argument[0]) {
 			default: return "Nothing"; break;
-			case WEAPON.STICK: return "Stick"; break;
-			case WEAPON.TOY_KNIFE: return "Toy Knife"; break;
+			case ARMOR.BANDAGE: return "Bandage"; break;
+			case ARMOR.FADED_RIBBON: return "Faded Ribbon"; break;
 		}
 	}
 
@@ -63,10 +63,9 @@
 	function armor_get_info() {
 		switch (argument[0]) {
 			default: return {strength: 0, keyName: undefined}; break;
-			case WEAPON.STICK: return {strength: 0, keyName: "stick"}; break;
-			case WEAPON.TOY_KNIFE: return {strength: 2, keyName: "toyknife"}; break;
+			case ARMOR.BANDAGE: return {strength: 0, keyName: "stick"}; break;
+			case ARMOR.FADED_RIBBON: return {strength: 2, keyName: "toyknife"}; break;
 		}
 	}
-	
 	
 #endregion

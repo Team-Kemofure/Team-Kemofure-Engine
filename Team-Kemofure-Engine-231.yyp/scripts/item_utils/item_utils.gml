@@ -22,6 +22,6 @@ function item_get_name() {
 function item_get_info() {
 	switch (argument[0]) {
 		default: return {hp: 0, special: false, keyName: undefined}; break;
-		case "item.consumables.monstercandy": return {hp: 10, special: true, keyName: "monstercandy"}; break;
+		case "item.consumables.monstercandy": return {hp: 10, special: false, keyName: "monstercandy"}; break;
 	}
 }

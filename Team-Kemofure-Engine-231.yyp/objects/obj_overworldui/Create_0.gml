@@ -1,8 +1,9 @@
 /// @description Initialization
 
-state = 0;		// Current state
-delay = 2;		// Box visibility delay
-writer = -1;	// The current writer
+state = 0;			// Current state
+delay = 2;			// Box visibility delay
+writer = -1;		// The current writer
+showBox = false;	// Are we supposed to show the box?
 
 internalStr = "";				// The message to write on the 
 textType = 0;					// Text type
