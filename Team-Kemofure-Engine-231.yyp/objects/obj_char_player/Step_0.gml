@@ -1,14 +1,72 @@
 /// @description Functionality
 
-var menu = obj_overworldmenu;
-if (key_ctrl_press && menu.mainState == 0 && !global.enable_fading_scene) {
-	menu.active = !menu.active;
-	global.canmove = !global.canmove;
-	audio_play_sound(snd_menumove, 10, false);
-}
-
 // Are we able to move?
 if (global.canmove) {
+	with (obj_overworldmenu) {
+		if (key_ctrl_press && mainState == 0 && !global.enable_fading_scene) {
+			active = !active;
+			global.canmove = false;
+			audio_play_sound(snd_menumove, 10, false);
+		}
+	}
+	
+	if (key_enter_press && !global.enable_fading_scene) {
+		var _xTL = x - sprite_xoffset;
+        var _yTL = y - sprite_yoffset;
+        var inst = noone;
+        
+        // Check for collision
+        switch (currDir)
+        {
+            case dir_down:
+                inst = collision_rectangle( _xTL + 4, 
+                                            _yTL + 20,
+                                            _xTL + sprite_width - 4,
+                                            _yTL + sprite_height + 15,
+                                            obj_interactable_parent,
+                                            true, true);
+                break;
+            case dir_left:
+                inst = collision_rectangle( _xTL - 15, 
+                                            _yTL + 19,
+                                            _xTL + (sprite_width * 0.5),
+                                            _yTL + sprite_height,
+                                            obj_interactable_parent,
+                                            true, true);
+                break;
+            case dir_up:
+                inst = collision_rectangle( _xTL + 4, 
+                                            _yTL + 8,
+                                            _xTL + sprite_width - 4,
+                                            _yTL + sprite_height - 5,
+                                            obj_interactable_parent,
+                                            true, true);
+                break;
+            case dir_right:
+                inst = collision_rectangle( _xTL + (sprite_width * 0.5), 
+                                            _yTL + 19,
+                                            _xTL + sprite_width + 15,
+                                            _yTL + sprite_height,
+                                            obj_interactable_parent,
+                                            true, true);
+                break;
+        }
+        
+        // Interact with the object if found
+        if (inst != noone)
+        {
+			global.currentinteraction = inst.id;
+			
+            if (inst.object_index == obj_interactable_npc || 
+                object_is_ancestor(inst.object_index, obj_interactable_npc))
+            {
+                with (inst) event_user(14);
+            }
+            
+            with (inst) event_user(0);
+        }
+	}
+	
 	var u = key_up, d = key_down, l = key_left, r = key_right;				// Adjust the keys
 	var collisionLeft = place_meeting(x - moveSpeed, y, obj_solid_parent),
 		collisionRight = place_meeting(x + moveSpeed, y, obj_solid_parent),

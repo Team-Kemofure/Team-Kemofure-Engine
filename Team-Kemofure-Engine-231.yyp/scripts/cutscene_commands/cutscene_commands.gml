@@ -6,6 +6,7 @@ function cutscene_end_action() {
 				scene++;
 			else {
 				scene = 0;
+				global.canmove = true;
 				sceneInfo = -1;
 			}
 		}
@@ -55,6 +56,16 @@ function cutscene_move_character(targetX, targetY, imageSpeed) {
 
 /// Creates a dialogue box with the given arguments
 function cutscene_text_settings(sound, textType) {
+	with (obj_overworldui) {
+		self.sound = sound;
+		if (!is_undefined(textType))
+			self.textType = textType;
+	}
+	cutscene_end_action();
+}
+
+/// Creates a dialogue box with the given arguments from a JSON file
+function cutscene_text_settings_from_json(sound, textType) {
 	with (obj_overworldui) {	
 		var finalized = [];
 		for (var i = 0; i < array_length(sound); i++) {
@@ -70,6 +81,29 @@ function cutscene_text_settings(sound, textType) {
 
 /// Creates a dialogue box with the given arguments
 function cutscene_run_text(msg, portrait) {
+	with (obj_overworldui) {
+		if (state == 0) && ((writer == -1) || (!instance_exists(writer))) {
+			internalStr = format_text_basic(msg);
+			
+			// Initialize the writer
+			writer = instance_create_depth(0, 0, 0, obj_writer);
+			writer.voice = [snd_voice_default];
+			writer.msg = internalStr;
+			writer.draw = false;
+			
+			// Check if optional arguments are given
+			if (!is_undefined(portrait))
+				portraitSprite = portrait;
+			
+			state = 1;
+			if (!global.scene)
+				global.canmove = false;
+		}
+	}
+}
+
+/// Creates a dialogue box with the given arguments from a JSON file
+function cutscene_run_text_from_json(msg, portrait) {
 	with (obj_overworldui) {
 		if (state == 0) && ((writer == -1) || (!instance_exists(writer))) {
 			internalStr = format_text_basic(json_raw(msg, global.localization));

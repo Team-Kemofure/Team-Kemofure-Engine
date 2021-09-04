@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_player_down",
-    "path": "sprites/spr_player_down/spr_player_down.yy",
+    "name": "spr_interactable",
+    "path": "sprites/spr_interactable/spr_interactable.yy",
   },
   "solid": false,
   "visible": true,
@@ -28,7 +28,7 @@
   ],
   "properties": [
     {"varType":3,"value":"True","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"collideable","tags":[],"resourceType":"GMObjectProperty",},
-    {"varType":5,"value":"0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"sprite_index","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":5,"value":"spr_interactable","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"sprite_index","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {
@@ -36,7 +36,7 @@
     "path": "folders/Objects/Gameplay/Characters/NPC's/Ancestors.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_npc_parent",
+  "name": "obj_interactable_parent",
   "tags": [],
   "resourceType": "GMObject",
 }
