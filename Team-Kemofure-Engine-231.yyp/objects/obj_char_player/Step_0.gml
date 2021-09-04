@@ -146,3 +146,5 @@ switch (currDir) {
 		sprite_index = spr_player_right;
 		break;
 }
+
+depth = (-y + (sprite_height / 2)) * 100;
