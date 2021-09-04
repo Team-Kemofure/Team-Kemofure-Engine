@@ -27,6 +27,11 @@ if (global.canmove) {
 	if (l) {
 		if (!collisionLeft)
 			x -= moveSpeed;
+		else {
+			if (u) currDir = dir_up;
+			if (d) currDir = dir_down;
+		}
+		
 		if (!specialKey && !(u && currDir == dir_up) && !(d && currDir == dir_down))
 			currDir = dir_left;
 	}
@@ -35,6 +40,11 @@ if (global.canmove) {
 	if (r) {
 		if (!collisionRight)
 			x += moveSpeed;
+		else {
+			if (u) currDir = dir_up;
+			if (d) currDir = dir_down;
+		}
+		
 		if (!specialKey && !(u && currDir == dir_up) && !(d && currDir == dir_down))
 			currDir = dir_right;
 	}
@@ -43,6 +53,11 @@ if (global.canmove) {
 	if (u) {
 		if (!collisionUp && !readyToDance)
 			y -= moveSpeed;
+		else {
+			if (l) currDir = dir_left;
+			if (r) currDir = dir_right;
+		}
+		
 		if (readyToDance || !(l && currDir == dir_left) && !(r && currDir == dir_right))
 			currDir = dir_up;
 	}
@@ -51,6 +66,11 @@ if (global.canmove) {
 	if (d) {
 		if (!collisionDown)
 			y += moveSpeed;
+		else {
+			if (l) currDir = dir_left;
+			if (r) currDir = dir_right;
+		}
+		
 		if (!(l && currDir == dir_left) && !(r && currDir == dir_right))
 			currDir = dir_down;
 	}

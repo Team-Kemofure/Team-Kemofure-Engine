@@ -37,6 +37,7 @@
     {"id":{"name":"number_sub_wrap","path":"scripts/number_sub_wrap/number_sub_wrap.yy",},"order":3,},
     {"id":{"name":"in_array","path":"scripts/in_array/in_array.yy",},"order":5,},
     {"id":{"name":"draw_menu_rectangle","path":"scripts/draw_menu_rectangle/draw_menu_rectangle.yy",},"order":1,},
+    {"id":{"name":"obj_npc_parent","path":"objects/obj_npc_parent/obj_npc_parent.yy",},"order":0,},
     {"id":{"name":"cutscene_create","path":"scripts/cutscene_create/cutscene_create.yy",},"order":1,},
     {"id":{"name":"ease","path":"scripts/ease/ease.yy",},"order":1,},
     {"id":{"name":"fnt_crypt","path":"fonts/fnt_crypt/fnt_crypt.yy",},"order":1,},
@@ -156,6 +157,8 @@
     {"folderPath":"folders/Sprites/Gameplay/Portraits.yy","order":6,"resourceVersion":"1.0","name":"Portraits","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Gameplay/Portraits/Papyrus.yy","order":1,"resourceVersion":"1.0","name":"Papyrus","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sounds/Gameplay/Items.yy","order":3,"resourceVersion":"1.0","name":"Items","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Gameplay/Characters/NPC's.yy","order":0,"resourceVersion":"1.0","name":"NPC's","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Gameplay/Characters/NPC's/Ancestors.yy","order":1,"resourceVersion":"1.0","name":"Ancestors","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
