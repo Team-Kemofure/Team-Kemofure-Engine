@@ -74,7 +74,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Papyrus",
-    "path": "folders/Sprites/Gameplay/Portraits/Papyrus.yy",
+    "path": "folders/Engine Elements/Sprites/Gameplay/Portraits/Papyrus.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_papface_mad",

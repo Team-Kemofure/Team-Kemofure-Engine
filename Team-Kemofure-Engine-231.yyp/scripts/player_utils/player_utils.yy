@@ -6,7 +6,7 @@
     "path": "folders/Engine Elements/Scripts/Gameplay/Player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "item_utils",
+  "name": "player_utils",
   "tags": [],
   "resourceType": "GMScript",
 }

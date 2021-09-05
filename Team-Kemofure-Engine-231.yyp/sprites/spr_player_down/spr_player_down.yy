@@ -82,7 +82,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Player",
-    "path": "folders/Sprites/Gameplay/Characters/Player.yy",
+    "path": "folders/Engine Elements/Sprites/Gameplay/Characters/Player.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_player_down",

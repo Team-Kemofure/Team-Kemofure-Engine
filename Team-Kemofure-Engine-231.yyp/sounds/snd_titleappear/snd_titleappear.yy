@@ -14,7 +14,7 @@
   "duration": 2.842993,
   "parent": {
     "name": "Other",
-    "path": "folders/Sounds/Other.yy",
+    "path": "folders/Engine Elements/Sounds/Other.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_titleappear",

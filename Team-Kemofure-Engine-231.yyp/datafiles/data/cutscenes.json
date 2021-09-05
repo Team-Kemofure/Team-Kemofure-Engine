@@ -1,6 +1,6 @@
 {
     "owmenu.contacts.papyrus.0" : [
-        ["cutscene_play_sfx", "snd_phone_ring"],
+        ["cutscene_play_sfx_from_string", "snd_phone_ring"],
         ["cutscene_wait", "1"],
         ["cutscene_run_text_from_json", "call.ringing"],
         ["cutscene_text_settings_from_json", ["snd_voice_papyrus"], "2"],
@@ -12,7 +12,7 @@
         ["cutscene_run_text_from_json", "call.end"]
     ],
     "owmenu.actions.item.use" : [
-        ["cutscene_play_sfx", "snd_power"],
+        ["cutscene_play_sfx_from_string", "snd_power"],
         ["cutscene_text_settings_from_json", ["snd_voice_default"], "0"]
     ],
     "owmenu.actions.item.info" : [

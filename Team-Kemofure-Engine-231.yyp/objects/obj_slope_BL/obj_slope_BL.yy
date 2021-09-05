@@ -28,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Slopes",
-    "path": "folders/Objects/Gameplay/Collisions/Slopes.yy",
+    "path": "folders/Engine Elements/Objects/Gameplay/Collisions/Slopes.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_slope_BL",

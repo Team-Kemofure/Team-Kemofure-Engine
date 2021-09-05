@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "Dialogues",
-    "path": "folders/Scripts/Gameplay/Dialogues.yy",
+    "path": "folders/Engine Elements/Scripts/Gameplay/Dialogues.yy",
   },
   "resourceVersion": "1.0",
   "name": "format_text_basic",

@@ -14,7 +14,7 @@
   "duration": 0.023401,
   "parent": {
     "name": "Menu",
-    "path": "folders/Sounds/Gameplay/Menu.yy",
+    "path": "folders/Engine Elements/Sounds/Gameplay/Menu.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_menumove",

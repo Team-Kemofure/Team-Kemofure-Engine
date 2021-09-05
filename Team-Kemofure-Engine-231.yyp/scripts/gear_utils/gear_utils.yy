@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "Player",
-    "path": "folders/Scripts/Gameplay/Player.yy",
+    "path": "folders/Engine Elements/Scripts/Gameplay/Player.yy",
   },
   "resourceVersion": "1.0",
   "name": "gear_utils",

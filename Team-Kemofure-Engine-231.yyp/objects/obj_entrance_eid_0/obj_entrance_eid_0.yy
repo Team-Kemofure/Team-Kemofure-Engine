@@ -25,7 +25,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Entrances",
-    "path": "folders/Objects/Gameplay/Triggers/Entrances.yy",
+    "path": "folders/Engine Elements/Objects/Gameplay/Triggers/Entrances.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_entrance_eid_0",

@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "Tweening",
-    "path": "folders/Scripts/Utility/Tweening.yy",
+    "path": "folders/Engine Elements/Scripts/Utility/Tweening.yy",
   },
   "resourceVersion": "1.0",
   "name": "ease",

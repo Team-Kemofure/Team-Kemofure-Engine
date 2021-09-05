@@ -1,8 +1,4 @@
 {
-  "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
-  },
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -20,6 +16,10 @@
   "For3D": false,
   "width": 9,
   "height": 9,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default",
+  },
   "swatchColours": null,
   "gridX": 0,
   "gridY": 0,
@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "User Interface",
-    "path": "folders/Sprites/Gameplay/User Interface.yy",
+    "path": "folders/Engine Elements/Sprites/Gameplay/User Interface.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_heartsmall",

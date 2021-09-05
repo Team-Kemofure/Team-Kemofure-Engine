@@ -28,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Collisions",
-    "path": "folders/Objects/Gameplay/Collisions.yy",
+    "path": "folders/Engine Elements/Objects/Gameplay/Collisions.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_solid",

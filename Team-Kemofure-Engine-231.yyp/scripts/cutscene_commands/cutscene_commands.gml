@@ -45,13 +45,51 @@ function cutscene_fade_screen(color, startingAlpha, targetAlpha, duration, fadeM
 
 /// Plays a sound effect and proceeds to the next scene
 function cutscene_play_sfx(soundid) {
+	var sound = sfx_play(soundid);
+	cutscene_end_action();
+	return sound;
+}
+
+/// Plays a sound effect and proceeds to the next scene
+function cutscene_play_sfx_from_string(soundid) {
 	var sound = sfx_play(asset_get_index(soundid));
 	cutscene_end_action();
 	return sound;
 }
 
-function cutscene_move_character(targetX, targetY, imageSpeed) {
+function cutscene_move_character(object, targetX, targetY, relative, movementSpeed) {
+	with (obj_cutscenehandler) {
+		if (x_dest == -1) && (y_dest == -1) {
+			x_dest = (!relative ? targetX : object.x + targetX);
+			y_dest = (!relative ? targetY : object.y + targetY);
+		}
+		var xx = x_dest, yy = y_dest;
+	}
 	
+	with (object) {
+		// Check if distance is more than the speed
+		if (point_distance(x, y, xx, yy) >= movementSpeed) {
+			var dir = point_direction(x, y, xx, yy),
+				ldirx = lengthdir_x(movementSpeed, dir),
+				ldiry = lengthdir_y(movementSpeed, dir);
+		
+			x += ldirx;
+			y += ldiry;
+			direction = dir;
+			currDir = direction_to_dir(id);
+		}
+		else {
+			x = xx;
+			y = yy;
+			
+			// Reset the values
+			with (obj_cutscenehandler) {
+				x_dest = -1;
+				y_dest = -1;
+			}
+			cutscene_end_action();
+		}
+	}
 }
 
 /// Creates a dialogue box with the given arguments

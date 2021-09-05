@@ -28,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Initialization",
-    "path": "folders/Objects/Initialization.yy",
+    "path": "folders/Engine Elements/Objects/Initialization.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_initialization",

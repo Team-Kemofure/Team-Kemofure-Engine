@@ -1,8 +1,4 @@
 {
-  "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
-  },
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -20,6 +16,10 @@
   "For3D": false,
   "width": 20,
   "height": 20,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default",
+  },
   "swatchColours": null,
   "gridX": 0,
   "gridY": 0,
@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Collideables",
-    "path": "folders/Sprites/Gameplay/Collideables.yy",
+    "path": "folders/Engine Elements/Sprites/Gameplay/Collideables.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_entrance",

@@ -1,8 +1,4 @@
 {
-  "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
-  },
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -20,6 +16,10 @@
   "For3D": false,
   "width": 282,
   "height": 27,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default",
+  },
   "swatchColours": null,
   "gridX": 0,
   "gridY": 0,
@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Other",
-    "path": "folders/Sprites/Other.yy",
+    "path": "folders/Engine Elements/Sprites/Other.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_titleimage",

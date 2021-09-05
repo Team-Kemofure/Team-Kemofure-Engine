@@ -74,7 +74,7 @@
   "nineSlice": null,
   "parent": {
     "name": "NPC's",
-    "path": "folders/Sprites/Gameplay/Characters/NPC's.yy",
+    "path": "folders/Engine Elements/Sprites/Gameplay/Characters/NPC's.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_npc_parent",

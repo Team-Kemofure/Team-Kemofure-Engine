@@ -71,7 +71,7 @@
   },
   "parent": {
     "name": "Gameplay",
-    "path": "folders/Rooms/Gameplay.yy",
+    "path": "folders/Engine Elements/Rooms/Gameplay.yy",
   },
   "resourceVersion": "1.0",
   "name": "rm_empty",

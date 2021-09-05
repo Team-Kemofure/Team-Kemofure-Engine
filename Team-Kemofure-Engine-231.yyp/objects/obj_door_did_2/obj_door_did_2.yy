@@ -28,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Doors",
-    "path": "folders/Objects/Gameplay/Triggers/Doors.yy",
+    "path": "folders/Engine Elements/Objects/Gameplay/Triggers/Doors.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_door_did_2",

@@ -22,7 +22,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Ancestors",
-    "path": "folders/Objects/Gameplay/Collisions/Ancestors.yy",
+    "path": "folders/Engine Elements/Objects/Gameplay/Collisions/Ancestors.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_solid_parent",
