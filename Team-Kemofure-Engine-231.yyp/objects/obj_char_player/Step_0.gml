@@ -157,6 +157,11 @@ if (global.canmove) {
 		y += moveSpeed;
 	if (u && place_meeting(x, y + moveSpeed, obj_slope_TR))
 		x -= moveSpeed;
+	
+	if (place_meeting(x, y, obj_npc_solid)) {
+		x = xprevious;
+		y = yprevious;
+	}
 }
 
 // Door collision check!

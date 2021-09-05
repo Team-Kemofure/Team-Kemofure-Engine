@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_entrance",
-    "path": "sprites/spr_entrance/spr_entrance.yy",
+    "name": "spr_solid",
+    "path": "sprites/spr_solid/spr_solid.yy",
   },
   "solid": false,
   "visible": false,
@@ -11,7 +11,7 @@
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
-  "physicsGroup": 0,
+  "physicsGroup": 1,
   "physicsDensity": 0.5,
   "physicsRestitution": 0.1,
   "physicsLinearDamping": 0.1,
@@ -24,11 +24,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Entrances",
-    "path": "folders/Engine Elements/Objects/Gameplay/Triggers/Entrances.yy",
+    "name": "Collisions",
+    "path": "folders/Engine Elements/Objects/Gameplay/Collisions.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_entrance_eid_2",
+  "name": "obj_npc_solid",
   "tags": [],
   "resourceType": "GMObject",
 }
