@@ -2,15 +2,16 @@
 
 // Are we able to move?
 if (global.canmove) {
-	with (obj_overworldmenu) {
-		if (key_ctrl_press && mainState == 0 && !global.enable_fading_scene) {
-			active = !active;
-			global.canmove = false;
-			audio_play_sound(snd_menumove, 10, false);
+	if (key_ctrl_press) {
+		with (obj_overworldmenu) {
+			if (mainState == 0 && !global.enable_fading_scene) {
+				active = !active;
+				global.canmove = false;
+				audio_play_sound(snd_menumove, 10, false);
+			}
 		}
 	}
-	
-	if (key_enter_press && !global.enable_fading_scene) {
+	else if (key_enter_press && !global.enable_fading_scene) {
 		var _xTL = x - sprite_xoffset;
         var _yTL = y - sprite_yoffset;
         var inst = noone;
