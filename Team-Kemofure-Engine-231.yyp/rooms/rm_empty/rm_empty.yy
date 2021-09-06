@@ -50,6 +50,7 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_interactable_npc","path":"objects/obj_interactable_npc/obj_interactable_npc.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":380.0,"y":80.0,"resourceVersion":"1.0","name":"inst_6E66DE5F","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_interactable_npc","path":"objects/obj_interactable_npc/obj_interactable_npc.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":540.0,"y":100.0,"resourceVersion":"1.0","name":"inst_D2E769F","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_interactable_npc","path":"objects/obj_interactable_npc/obj_interactable_npc.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":320.0,"y":120.0,"resourceVersion":"1.0","name":"inst_6E680562","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"obj_trigger_scene","path":"objects/obj_trigger_scene/obj_trigger_scene.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":4.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":420.0,"y":80.0,"resourceVersion":"1.0","name":"inst_66FA2C85","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":20,"gridY":20,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"tilesetId":{"name":"tileset_example","path":"tilesets/tileset_example/tileset_example.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":32,"SerialiseHeight":12,"TileSerialiseData":[
 2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,0,0,0,0,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,
@@ -100,6 +101,7 @@
     {"name":"inst_6E66DE5F","path":"rooms/rm_empty/rm_empty.yy",},
     {"name":"inst_D2E769F","path":"rooms/rm_empty/rm_empty.yy",},
     {"name":"inst_6E680562","path":"rooms/rm_empty/rm_empty.yy",},
+    {"name":"inst_66FA2C85","path":"rooms/rm_empty/rm_empty.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

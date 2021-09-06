@@ -4,13 +4,18 @@ event_inherited();
 
 var ui = obj_overworldui;
 if (ui.state == 1) {
-	if ((global.currentinteraction == self.id) && (!ui.writer.completed))
-		self.image_speed = 0.4;
+	if ((global.currentinteraction == id) && (!ui.writer.completed))
+		image_speed = 0.4;
 	else {
-		self.image_speed = 0;
-		self.image_index = 0;
+		image_speed = 0;
+		image_index = 0;
 	}
 }
+else if (ui.state == 0) {
+	image_speed = 0;
+	image_index = 0;
+}
+
 
 // Update our current sprite according from the current direction
 switch (currDir) {
