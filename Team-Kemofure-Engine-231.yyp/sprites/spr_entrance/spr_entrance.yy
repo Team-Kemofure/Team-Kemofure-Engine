@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Collideables",
-    "path": "folders/Engine Elements/Sprites/Gameplay/Collideables.yy",
+    "path": "folders/Engine-Specific/Sprites/Gameplay/Collideables.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_entrance",

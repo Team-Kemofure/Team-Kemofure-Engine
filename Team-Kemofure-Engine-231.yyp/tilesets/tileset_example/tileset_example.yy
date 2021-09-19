@@ -69,7 +69,7 @@
   },
   "parent": {
     "name": "Tilesets",
-    "path": "folders/Engine Elements/Tilesets.yy",
+    "path": "folders/Engine-Specific/Tilesets.yy",
   },
   "resourceVersion": "1.0",
   "name": "tileset_example",

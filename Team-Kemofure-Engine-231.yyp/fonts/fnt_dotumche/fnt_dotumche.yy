@@ -127,7 +127,7 @@
   "maintainGms1Font": true,
   "parent": {
     "name": "Fonts",
-    "path": "folders/Engine Elements/Fonts.yy",
+    "path": "folders/Engine-Specific/Fonts.yy",
   },
   "resourceVersion": "1.0",
   "name": "fnt_dotumche",

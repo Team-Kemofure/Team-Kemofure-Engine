@@ -99,27 +99,27 @@ switch (mainState) {
 				
 				// Choosing an option
 				if (key_enter_press) {
-					var item = ds_list_find_value(global.playerstats.inventory, itemSelection), info = item_get_info(item);
+					var item = item_get_id(itemSelection), info = item_get_info(item);
 					var hp = info.hp, special = info.special, keyName = info.keyName;
 					switch (selection) {
 						case 0:
 							global.textformat = [item_get_name(item), string(hp)];
 							cutscene_create(json_array("owmenu.actions.item.use", global.cutscenejson));
-							obj_cutscenehandler.sceneInfo[2] = [cutscene_run_text_from_json, "item.use.heal." + (hp < (global.playerstats.hp[1] - global.playerstats.hp[0]) ? "part" : "all")];
+							obj_cutscenehandler.sceneInfo[2] = [cutscene_run_text, "item.use.heal." + (hp < (global.playerstats.hp[1] - global.playerstats.hp[0]) ? "part" : "all")];
 							if (global.playerstats.hp[0] < global.playerstats.hp[1])
 								global.playerstats.hp[0] = clamp(global.playerstats.hp[0], global.playerstats.hp[0] + hp, global.playerstats.hp[1]);
-							item_remove(item);
+							item_remove(itemSelection);
 							break;
 						case 1:
 							global.textformat = [string(hp)];
 							cutscene_create(json_array("owmenu.actions.item.info", global.cutscenejson));
-							obj_cutscenehandler.sceneInfo[1] = [cutscene_run_text_from_json, "item.info." + keyName];
+							obj_cutscenehandler.sceneInfo[1] = [cutscene_run_text, "item.info." + keyName];
 							break;
 						case 2:
 							global.textformat = [item_get_name(item)];
 							cutscene_create(json_array("owmenu.actions.item.drop", global.cutscenejson));
-							obj_cutscenehandler.sceneInfo[1] = [cutscene_run_text_from_json, "item.drop." + (!special ? string(irandom(4)) : "warn")];
-							if (!special) item_remove(item);
+							obj_cutscenehandler.sceneInfo[1] = [cutscene_run_text, "item.drop." + (!special ? string(irandom(4)) : "warn")];
+							if (!special) item_remove(itemSelection);
 							break;
 					}
 					subState = 2;

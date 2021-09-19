@@ -14,7 +14,7 @@
   "duration": 0.187166,
   "parent": {
     "name": "Menu",
-    "path": "folders/Engine Elements/Sounds/Gameplay/Menu.yy",
+    "path": "folders/Engine-Specific/Sounds/Gameplay/Menu.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_menuselect",

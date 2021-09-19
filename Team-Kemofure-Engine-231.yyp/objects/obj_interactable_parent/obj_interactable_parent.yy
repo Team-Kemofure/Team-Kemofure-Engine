@@ -34,7 +34,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Ancestors",
-    "path": "folders/Engine Elements/Objects/Gameplay/Characters/NPC's/Ancestors.yy",
+    "path": "folders/Engine-Specific/Objects/Gameplay/Overworld/Characters/NPC's/Ancestors.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_interactable_parent",

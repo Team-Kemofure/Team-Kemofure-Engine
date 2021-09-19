@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "JSON's",
-    "path": "folders/Engine Elements/Scripts/Utility/JSON's.yy",
+    "path": "folders/Engine-Specific/Scripts/Utility/JSON's.yy",
   },
   "resourceVersion": "1.0",
   "name": "json_utils",

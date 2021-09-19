@@ -14,7 +14,7 @@
   "duration": 0.712971,
   "parent": {
     "name": "Items",
-    "path": "folders/Engine Elements/Sounds/Gameplay/Items.yy",
+    "path": "folders/Engine-Specific/Sounds/Gameplay/Items.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_power",

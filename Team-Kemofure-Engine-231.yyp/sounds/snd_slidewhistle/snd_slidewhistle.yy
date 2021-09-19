@@ -14,7 +14,7 @@
   "duration": 0.816961,
   "parent": {
     "name": "Sounds",
-    "path": "folders/Gameplay Elements/Sounds.yy",
+    "path": "folders/Gameplay-Specific/Sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_slidewhistle",

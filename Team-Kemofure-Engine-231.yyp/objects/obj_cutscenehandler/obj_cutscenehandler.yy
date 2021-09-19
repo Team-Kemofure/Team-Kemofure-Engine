@@ -25,7 +25,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Initialization",
-    "path": "folders/Engine Elements/Objects/Initialization.yy",
+    "path": "folders/Engine-Specific/Objects/Initialization.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_cutscenehandler",

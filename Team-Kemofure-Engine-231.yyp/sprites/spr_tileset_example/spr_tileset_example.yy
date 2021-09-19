@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Tilesets",
-    "path": "folders/Engine Elements/Sprites/Tilesets.yy",
+    "path": "folders/Engine-Specific/Sprites/Tilesets.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_tileset_example",

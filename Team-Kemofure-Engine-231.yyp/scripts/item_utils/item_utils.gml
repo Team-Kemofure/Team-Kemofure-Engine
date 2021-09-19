@@ -1,14 +1,20 @@
 
+/// @param itemPos
+/// Gets the item ID from an item position
+function item_get_id() {
+	return ds_list_find_value(global.playerstats.inventory, argument[0]);
+}
+
 /// @param itemID
 /// Adds an item to the inventory
 function item_add() {
 	ds_list_add(global.playerstats.inventory, argument[0]);
 }
 
-/// @param itemID
+/// @param itemPos
 /// Removes an item from the inventory
 function item_remove() {
-	ds_list_delete(global.playerstats.inventory, ds_list_find_index(global.playerstats.inventory, argument[0]));
+	ds_list_delete(global.playerstats.inventory, argument[0]);
 }
 
 /// @param itemID
@@ -21,7 +27,7 @@ function item_get_name() {
 /// Gets the info of an item
 function item_get_info() {
 	switch (argument[0]) {
-		default: return {hp: 0, special: false, keyName: undefined}; break;
-		case "item.consumables.monstercandy": return {hp: 10, special: false, keyName: "monstercandy"}; break;
+		default: return {hp : 0, special : false, price : 0, keyName : undefined}; break;
+		case "item.consumables.monstercandy": return {hp : 10, special : false, price : 3, keyName : "monstercandy"}; break;
 	}
 }

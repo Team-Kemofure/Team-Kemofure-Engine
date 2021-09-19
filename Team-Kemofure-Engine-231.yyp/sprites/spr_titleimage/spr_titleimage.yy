@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Other",
-    "path": "folders/Engine Elements/Sprites/Other.yy",
+    "path": "folders/Engine-Specific/Sprites/Other.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_titleimage",

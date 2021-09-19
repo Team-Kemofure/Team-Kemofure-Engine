@@ -74,7 +74,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Player",
-    "path": "folders/Engine Elements/Sprites/Gameplay/Characters/Player.yy",
+    "path": "folders/Engine-Specific/Sprites/Gameplay/Characters/Player.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_player_right",

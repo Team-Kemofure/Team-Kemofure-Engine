@@ -32,7 +32,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Characters",
-    "path": "folders/Engine Elements/Objects/Gameplay/Characters.yy",
+    "path": "folders/Engine-Specific/Objects/Gameplay/Overworld/Characters.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_char_player",

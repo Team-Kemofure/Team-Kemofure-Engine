@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Slopes",
-    "path": "folders/Engine Elements/Sprites/Gameplay/Collideables/Slopes.yy",
+    "path": "folders/Engine-Specific/Sprites/Gameplay/Collideables/Slopes.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_slope_TR",

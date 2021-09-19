@@ -26,9 +26,9 @@
 	/// Gets the info of a weapon
 	function weapon_get_info() {
 		switch (argument[0]) {
-			default: return {strength: 0, keyName: undefined}; break;
-			case WEAPON.STICK: return {strength: 0, keyName: "stick"}; break;
-			case WEAPON.TOY_KNIFE: return {strength: 2, keyName: "toyknife"}; break;
+			default: return {strength : 0, price : 0, keyName : undefined}; break;
+			case WEAPON.STICK: return {strength : 0, price : 3, keyName : "stick"}; break;
+			case WEAPON.TOY_KNIFE: return {strength : 2, price : 5, keyName : "toyknife"}; break;
 		}
 	}
 	
@@ -62,9 +62,9 @@
 	/// Gets the info of a weapon
 	function armor_get_info() {
 		switch (argument[0]) {
-			default: return {strength: 0, keyName: undefined}; break;
-			case ARMOR.BANDAGE: return {strength: 0, keyName: "stick"}; break;
-			case ARMOR.FADED_RIBBON: return {strength: 2, keyName: "toyknife"}; break;
+			default: return {strength : 0, price : 0, keyName : undefined}; break;
+			case ARMOR.BANDAGE: return {strength : 0, price : 3, keyName : "stick"}; break;
+			case ARMOR.FADED_RIBBON: return {strength : 2, price : 5, keyName : "toyknife"}; break;
 		}
 	}
 	

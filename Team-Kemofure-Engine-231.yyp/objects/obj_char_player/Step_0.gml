@@ -167,7 +167,7 @@ if (global.canmove) {
 // Door collision check!
 if (place_meeting(x, y, obj_door) && global.canmove && !global.enable_fading_scene) {
 	var inst = instance_place(x, y, obj_door);
-	fader = fader_changeval(c_black, 0, 1, 0.25, false);
+	fader = fade_screen(c_black, 0, 1, 0.25, false);
 	targetRoom = inst.targetRoom;
 	
 	global.entrance_on_room_start = inst.targetEntrance;

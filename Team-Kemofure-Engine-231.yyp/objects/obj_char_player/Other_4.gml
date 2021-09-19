@@ -3,7 +3,7 @@
 global.playersteps = 0;
 
 if (global.enable_fading_scene) {
-	fader = fader_changeval(c_black, 1, 0, 0.25, false);
+	fader = fade_screen(c_black, 1, 0, 0.25, false);
 	
 	global.canmove = true;
 	global.enable_fading_scene = false;

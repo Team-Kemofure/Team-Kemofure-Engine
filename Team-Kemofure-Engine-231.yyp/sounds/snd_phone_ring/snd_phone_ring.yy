@@ -14,7 +14,7 @@
   "duration": 0.991746,
   "parent": {
     "name": "Phone",
-    "path": "folders/Engine Elements/Sounds/Gameplay/Phone.yy",
+    "path": "folders/Engine-Specific/Sounds/Gameplay/Phone.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_phone_ring",

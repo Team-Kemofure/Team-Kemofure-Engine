@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "Cutscenes",
-    "path": "folders/Engine Elements/Scripts/Utility/Cutscenes.yy",
+    "path": "folders/Engine-Specific/Scripts/Utility/Cutscenes.yy",
   },
   "resourceVersion": "1.0",
   "name": "cutscene_commands",

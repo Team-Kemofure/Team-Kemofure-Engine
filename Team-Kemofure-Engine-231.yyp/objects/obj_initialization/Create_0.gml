@@ -48,3 +48,5 @@ instance_create_depth(0, 0, 0, obj_overworldmenu);
 instance_create_depth(0, 0, 0, obj_overworldui);
 call_list_add("Call Papyrus", "owmenu.contacts.papyrus.0");
 item_add("item.consumables.monstercandy");
+item_add("item.consumables.monstercandy");
+item_add("item.consumables.monstercandy");

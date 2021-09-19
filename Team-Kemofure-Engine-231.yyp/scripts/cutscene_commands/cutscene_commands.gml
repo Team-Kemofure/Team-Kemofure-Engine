@@ -17,7 +17,7 @@ function cutscene_end_action() {
 function cutscene_wait(seconds) {
 	with (obj_cutscenehandler) {
 		timer++;
-		if (timer >= real(seconds) * room_speed) {
+		if (timer >= floor(real(seconds) * room_speed)) {
 			cutscene_end_action();
 			timer = 0;
 		}
@@ -38,21 +38,15 @@ function cutscene_destroy_instance(obj) {
 }
 
 /// Fades the screen to a value and proceeds to the next scene
-function cutscene_fade_screen(color, startingAlpha, targetAlpha, duration, fadeMusic) {
-	fader_changeval(color, startingAlpha, targetAlpha, duration, fadeMusic);
+function cutscene_fade_screen(color, start, target, duration, fadeMusic) {
+	fade_screen(color, start, target, duration, fadeMusic);
 	cutscene_end_action();
 }
 
 /// Plays a sound effect and proceeds to the next scene
 function cutscene_play_sfx(soundid) {
-	var sound = sfx_play(soundid);
-	cutscene_end_action();
-	return sound;
-}
-
-/// Plays a sound effect and proceeds to the next scene
-function cutscene_play_sfx_from_string(soundid) {
-	var sound = sfx_play(asset_get_index(soundid));
+	var value = is_string(soundid);
+	var sound = sfx_play(!value ? soundid : asset_get_index(soundid));
 	cutscene_end_action();
 	return sound;
 }
@@ -92,27 +86,18 @@ function cutscene_move_character(object, targetX, targetY, relative, movementSpe
 	}
 }
 
-/// Creates a dialogue box with the given arguments
+/// Sets various settings for the upcoming dialogue(s)
 function cutscene_text_settings(sound, textType) {
 	with (obj_overworldui) {
-		self.sound = sound;
-		if (!is_undefined(textType))
-			self.textType = textType;
-	}
-	cutscene_end_action();
-}
-
-/// Creates a dialogue box with the given arguments from a JSON file
-function cutscene_text_settings_from_json(sound, textType) {
-	with (obj_overworldui) {	
-		var finalized = [];
+		var finalized = [], value = false;
 		for (var i = 0; i < array_length(sound); i++) {
 			finalized[i] = asset_get_index(sound[i]);
+			value = is_string(sound[i]);
 		}
-
-		self.sound = finalized;
+		
+		self.sound = !value ? sound : finalized;
 		if (!is_undefined(textType))
-			self.textType = real(textType);
+			self.textType = !value ? textType : real(textType);
 	}
 	cutscene_end_action();
 }
@@ -120,8 +105,9 @@ function cutscene_text_settings_from_json(sound, textType) {
 /// Creates a dialogue box with the given arguments
 function cutscene_run_text(msg, portrait) {
 	with (obj_overworldui) {
+		var value = variable_struct_exists(global.localization, msg);
 		if (state == 0) && ((writer == -1) || (!instance_exists(writer))) {
-			internalStr = format_text_basic(msg);
+			internalStr = format_text_basic(!value ? msg : json_raw(msg, global.localization));
 			
 			// Initialize the writer
 			writer = instance_create_depth(0, 0, 0, obj_writer);
@@ -131,7 +117,7 @@ function cutscene_run_text(msg, portrait) {
 			
 			// Check if optional arguments are given
 			if (!is_undefined(portrait))
-				portraitSprite = portrait;
+				portraitSprite = !value ? portrait : asset_get_index(portrait);
 			
 			state = 1;
 			if (!global.scene)
@@ -140,26 +126,13 @@ function cutscene_run_text(msg, portrait) {
 	}
 }
 
-/// Creates a dialogue box with the given arguments from a JSON file
-function cutscene_run_text_from_json(msg, portrait) {
-	with (obj_overworldui) {
-		if (state == 0) && ((writer == -1) || (!instance_exists(writer))) {
-			internalStr = format_text_basic(json_raw(msg, global.localization));
-			
-			// Initialize the writer
-			writer = instance_create_depth(0, 0, 0, obj_writer);
-			writer.voice = [snd_voice_default];
-			writer.msg = internalStr;
-			writer.draw = false;
-			
-			// Check if optional arguments are given
-			if (!is_undefined(portrait))
-				portraitSprite = asset_get_index(portrait);
-			
-			state = 1;
-			if (!global.scene)
-				global.canmove = false;
-		}
+function setMainShopText(internalStr) {
+	with (obj_shop_parent) {
+		writer.writer = instance_create_depth(0, 0, 0, obj_writer);
+		writer.writer.voice = writer.sound;
+		writer.writer.msg = format_text_basic(internalStr);
+		writer.writer.draw = false;
 	}
+	cutscene_end_action();
 }
 

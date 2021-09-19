@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "Player",
-    "path": "folders/Engine Elements/Scripts/Gameplay/Player.yy",
+    "path": "folders/Engine-Specific/Scripts/Gameplay/Player.yy",
   },
   "resourceVersion": "1.0",
   "name": "player_utils",
