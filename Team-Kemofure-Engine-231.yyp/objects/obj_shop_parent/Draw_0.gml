@@ -81,7 +81,7 @@ switch (state) {
 				break;
 		}
 		draw_set_color(c_yellow);
-		draw_text_transformed(200, 215, "(" + string(global.playerstats.gold) + ")", 0.5, 0.5, 0);
+		draw_text_transformed(200, 211, "(" + string(global.playerstats.gold) + ")", 0.5, 0.5, 0);
 		draw_set_color(c_white);
 		break;
 }

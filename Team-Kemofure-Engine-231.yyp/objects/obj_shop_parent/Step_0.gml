@@ -74,8 +74,9 @@ switch (state) {
 					}
 					
 					if (key_shift_press) {
-						state = 0;
+						cutscene_create(scenes.mainTextScene);
 						selection = 1;
+						state = 0;
 					}
 					
 					if (prev != selection) sfx_play(snd_menumove);
@@ -101,6 +102,7 @@ switch (state) {
 							subState = 0;
 						}
 						else {
+							cutscene_create(scenes.mainTextScene);
 							selection = 1;
 							state = 0;
 						}
