@@ -12,6 +12,9 @@ function fade_screen() {
 	fader.target = argument[2];					// Adjust the target alpha
 	fader.duration = argument[3];				// Adjust the duration in seconds
 	fader.fadeMusic = argument[4];				// Fade the music as well?
-
+	
+	if (fader.fadeMusic)
+		audio_sound_gain(global.currentmusic, !fader.target, fader.duration * 1000);
+	
 	return fader;
 }

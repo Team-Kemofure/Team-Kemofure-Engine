@@ -99,6 +99,7 @@
     {"name":"Windows","path":"options/windows/options_windows.yy",},
     {"name":"macOS","path":"options/mac/options_mac.yy",},
     {"name":"Main","path":"options/main/options_main.yy",},
+    {"name":"operagx","path":"options/operagx/options_operagx.yy",},
   ],
   "isDnDProject": false,
   "isEcma": false,
@@ -197,7 +198,7 @@
     {"CopyToMask":-1,"filePath":"datafiles/data","resourceVersion":"1.0","name":"cutscenes.json","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
-    "IDEVersion": "23.1.1.371",
+    "IDEVersion": "23.1.1.393",
   },
   "resourceVersion": "1.4",
   "name": "Team-Kemofure-Engine-231",
