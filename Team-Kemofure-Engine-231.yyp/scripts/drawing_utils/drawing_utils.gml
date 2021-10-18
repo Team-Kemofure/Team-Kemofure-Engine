@@ -1,3 +1,11 @@
+/// Draws a rectangle with a white border
+function draw_menu_rectangle(x1, y1, x2, y2, outlineSize) {
+	draw_set_color(c_white);
+	draw_rectangle(x1, y1, x2, y2, false);
+	draw_set_color(c_black);
+	draw_rectangle(x1 + outlineSize, y1 + outlineSize, x2 - outlineSize, y2 - outlineSize, false);
+}
+
 /// @param x
 /// @param y
 /// @param message

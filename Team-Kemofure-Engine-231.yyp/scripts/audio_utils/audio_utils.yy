@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Integers",
-    "path": "folders/Scripts/Utility/Integers.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "number_add_wrap",
+  "name": "audio_utils",
   "tags": [],
   "resourceType": "GMScript",
 }

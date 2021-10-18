@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Music",
-    "path": "folders/Scripts/Utility/Audio/Music.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "music_play",
+  "name": "string_utils",
   "tags": [],
   "resourceType": "GMScript",
 }

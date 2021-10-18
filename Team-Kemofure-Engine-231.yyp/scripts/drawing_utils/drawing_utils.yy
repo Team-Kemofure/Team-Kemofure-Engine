@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Audio",
-    "path": "folders/Scripts/Utility/Audio.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sfx_play",
+  "name": "drawing_utils",
   "tags": [],
   "resourceType": "GMScript",
 }
