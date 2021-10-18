@@ -28,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "User Interface",
-    "path": "folders/Engine-Specific/Objects/Gameplay/Overworld/User Interface.yy",
+    "path": "folders/Objects/In-Game Elements/Overworld/User Interface.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_overworldui",

@@ -27,7 +27,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Shops",
-    "path": "folders/Engine-Specific/Objects/Gameplay/Shops.yy",
+    "path": "folders/Objects/In-Game Elements/Shops.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_shop_test",

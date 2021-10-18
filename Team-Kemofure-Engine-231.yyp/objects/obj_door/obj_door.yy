@@ -29,7 +29,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Ancestors",
-    "path": "folders/Engine-Specific/Objects/Gameplay/Overworld/Triggers/Doors/Ancestors.yy",
+    "path": "folders/Objects/In-Game Elements/Overworld/Triggers/Doors/Ancestors.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_door",

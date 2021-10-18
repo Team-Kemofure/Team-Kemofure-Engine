@@ -13,8 +13,8 @@
   "soundFile": "snd_slidewhistle.wav",
   "duration": 0.816961,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Gameplay-Specific/Sounds.yy",
+    "name": "Other",
+    "path": "folders/Sounds/Other.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_slidewhistle",

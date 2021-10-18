@@ -25,7 +25,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Entrances",
-    "path": "folders/Engine-Specific/Objects/Gameplay/Overworld/Triggers/Entrances.yy",
+    "path": "folders/Objects/In-Game Elements/Overworld/Triggers/Entrances.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_entrance_eid_0",

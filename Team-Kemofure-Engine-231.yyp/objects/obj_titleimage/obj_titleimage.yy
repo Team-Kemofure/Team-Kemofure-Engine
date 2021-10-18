@@ -31,7 +31,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Menu",
-    "path": "folders/Engine-Specific/Objects/Gameplay/Menu.yy",
+    "path": "folders/Objects/In-Game Elements/Menu.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_titleimage",

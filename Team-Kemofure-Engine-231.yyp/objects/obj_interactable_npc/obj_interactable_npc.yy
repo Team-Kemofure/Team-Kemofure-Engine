@@ -33,7 +33,7 @@
   ],
   "parent": {
     "name": "Ancestors",
-    "path": "folders/Engine-Specific/Objects/Gameplay/Overworld/Characters/NPC's/Ancestors.yy",
+    "path": "folders/Objects/In-Game Elements/Overworld/Characters/NPC's/Ancestors.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_interactable_npc",

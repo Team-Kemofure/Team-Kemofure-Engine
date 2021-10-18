@@ -26,7 +26,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Ancestors",
-    "path": "folders/Engine-Specific/Objects/Initialization/Ancestors.yy",
+    "path": "folders/Objects/Program-Specific/Ancestors.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_transition_parent",

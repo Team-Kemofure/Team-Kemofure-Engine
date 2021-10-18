@@ -47,7 +47,7 @@
   },
   "parent": {
     "name": "Other",
-    "path": "folders/Engine-Specific/Rooms/Other.yy",
+    "path": "folders/Rooms/Other.yy",
   },
   "resourceVersion": "1.0",
   "name": "rm_shop",

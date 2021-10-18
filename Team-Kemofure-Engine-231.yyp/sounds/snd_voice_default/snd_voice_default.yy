@@ -14,7 +14,7 @@
   "duration": 1.714286,
   "parent": {
     "name": "Voices",
-    "path": "folders/Engine-Specific/Sounds/Gameplay/Voices.yy",
+    "path": "folders/Sounds/Gameplay/Voices.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_voice_default",

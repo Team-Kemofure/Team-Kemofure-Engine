@@ -47,7 +47,7 @@
   },
   "parent": {
     "name": "Initialization",
-    "path": "folders/Engine-Specific/Rooms/Initialization.yy",
+    "path": "folders/Rooms/Initialization.yy",
   },
   "resourceVersion": "1.0",
   "name": "rm_title",

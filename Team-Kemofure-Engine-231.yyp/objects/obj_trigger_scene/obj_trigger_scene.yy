@@ -29,7 +29,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Triggers",
-    "path": "folders/Engine-Specific/Objects/Gameplay/Overworld/Triggers.yy",
+    "path": "folders/Objects/In-Game Elements/Overworld/Triggers.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_trigger_scene",

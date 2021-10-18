@@ -22,7 +22,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Ancestors",
-    "path": "folders/Engine-Specific/Objects/Gameplay/Overworld/Collisions/Ancestors.yy",
+    "path": "folders/Objects/In-Game Elements/Overworld/Collisions/Ancestors.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_slope_parent",

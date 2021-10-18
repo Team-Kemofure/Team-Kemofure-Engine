@@ -25,7 +25,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Collisions",
-    "path": "folders/Engine-Specific/Objects/Gameplay/Overworld/Collisions.yy",
+    "path": "folders/Objects/In-Game Elements/Overworld/Collisions.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_npc_solid",

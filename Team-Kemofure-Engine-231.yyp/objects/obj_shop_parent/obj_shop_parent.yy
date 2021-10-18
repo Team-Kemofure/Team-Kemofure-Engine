@@ -27,7 +27,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Ancestors",
-    "path": "folders/Engine-Specific/Objects/Gameplay/Shops/Ancestors.yy",
+    "path": "folders/Objects/In-Game Elements/Shops/Ancestors.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_shop_parent",

@@ -14,7 +14,7 @@
   "duration": 0.645805,
   "parent": {
     "name": "Shop",
-    "path": "folders/Engine-Specific/Sounds/Gameplay/Shop.yy",
+    "path": "folders/Sounds/Gameplay/Shop.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_buy",
