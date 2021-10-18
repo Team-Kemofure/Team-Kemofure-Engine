@@ -126,6 +126,11 @@ function cutscene_run_text(msg, portrait) {
 	}
 }
 
+function cutscene_set_music_volume(volume, seconds) {
+	music_set_volume(volume, seconds);
+	cutscene_end_action();
+}
+
 function setMainShopText(internalStr) {
 	with (obj_shop_parent) {
 		writer.writer = instance_create_depth(0, 0, 0, obj_writer);

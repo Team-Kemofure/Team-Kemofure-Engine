@@ -12,7 +12,7 @@ if (!completed) {
 	if (alpha == target) || (lenCheck >= (target + lenCheckAdd) / (duration * room_speed)) {
 		alpha = target;
 		if (fadeMusic)
-			audio_sound_gain(global.currentmusic, !target, 0);
+			audio_sound_gain(global.currentmusicstream, !target, 0);
 		event_user(0); // We've completed transitioning!
 	}
 }

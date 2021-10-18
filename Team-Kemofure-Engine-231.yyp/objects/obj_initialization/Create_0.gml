@@ -28,6 +28,7 @@ global.scene = false;									// Are we currently in a scene?
 global.canmove = true;									// Are we able to move?
 global.playersteps = 0;									// The current player steps
 global.currentmusic = -1;								// The current music
+global.currentmusicstream = -1;							// The current music stream
 global.currentinteraction = noone;						// The NPC we're currently interacting
 global.enable_fading_scene = false;						// Should we enable the fading scene?
 global.entrance_on_room_start = -1;						// The entrance we're going to spawn on at the start of the room

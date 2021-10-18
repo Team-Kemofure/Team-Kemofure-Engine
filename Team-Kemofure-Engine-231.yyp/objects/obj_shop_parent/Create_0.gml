@@ -10,7 +10,10 @@ prevSelection = 0;
 
 strings = {
 	sellingQuestion : "Are you sure that you want to sell this item?",
-	buyList : ["items.consumables.monstercandy", WEAPON.STICK]
+	buyList :	["item.consumables.monstercandy", 
+				"item.consumables.monstercandy",
+				"item.consumables.monstercandy"],
+	stockList : [1, 3, 3]
 }
 
 // Scenes
@@ -51,6 +54,7 @@ writer = {
 // Misc Variables
 misc = {
 	disableDrawing : false,
+	smallBoxY : 0,
 	mainTextX : 20,
 	mainTextY : 138
 }

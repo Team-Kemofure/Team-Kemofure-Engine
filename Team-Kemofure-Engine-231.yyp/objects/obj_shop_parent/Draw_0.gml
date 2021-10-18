@@ -3,6 +3,7 @@
 if (misc.disableDrawing)
 	exit;
 
+draw_menu_rectangle(214, 125 - misc.smallBoxY, 319, 125, 4);
 draw_menu_rectangle(0, 120, 320, 239, 4);
 if (state != 2 && state != 4) {
 	draw_menu_rectangle(214, 121, 319, 238, 3);
@@ -22,6 +23,28 @@ switch (state) {
 		draw_text_transformed(240, 176, json_raw("shopmenu.talk", global.localization), 0.5, 0.5, 0);
 		draw_text_transformed(240, 195, json_raw("shopmenu.exit", global.localization), 0.5, 0.5, 0);
 		draw_sprite(spr_heartsmall, 0, 225, 142 + (19 * selection));
+		break;
+	case 1:
+		draw_set_color(c_white);
+		var itemName, itemInfo;
+		for (var i = 0; i < array_length(strings.buyList); i++) {
+			itemName[i] = item_get_name(strings.buyList[i]);
+			itemInfo[i] = item_get_info(strings.buyList[i]);
+			if (strings.stockList[i] != 0)
+				draw_text_transformed(30, 134 + (19 * i), string(itemInfo[i].price) + "G - " + itemName[i], 0.5, 0.5, 0);
+			else {
+				draw_set_color(c_silver);
+				draw_text_transformed(30, 134 + (19 * i), "-- SOLD OUT --", 0.5, 0.5, 0);
+			}
+			draw_set_color(c_white);
+		}
+		
+		if (selection != array_length(strings.buyList))
+			draw_sprite(spr_heartsmall, 0, 15, 138 + (19 * selection));
+		else
+			draw_sprite(spr_heartsmall, 0, 15, 215);
+		
+		draw_text_transformed(30, 211, json_raw("shopmenu.exit", global.localization), 0.5, 0.5, 0);
 		break;
 	case 2:
 		if (!options.canSell)

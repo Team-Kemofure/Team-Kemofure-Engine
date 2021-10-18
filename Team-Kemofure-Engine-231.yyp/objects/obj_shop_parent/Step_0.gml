@@ -25,6 +25,36 @@ switch (state) {
 			sfx_play(snd_menuselect);
 		}
 		break;
+	case 1:
+		var prev = selection, _max = array_length(strings.buyList) - 1,
+			itemInfo = item_get_info(strings.buyList[min(_max, selection)]);
+		writer.writer.internalStr = "";
+		writer.writer.msg = "";
+		
+		// Showing off the small box
+		if (misc.smallBoxY < 86)
+			misc.smallBoxY += 5;
+		
+		if (d) selection = number_add_wrap(selection, _max + 1);
+		if (u) selection = number_sub_wrap(selection, _max + 1);
+		if (key_enter_press) {
+			if (selection == _max + 1) {
+				cutscene_create(scenes.mainTextScene);
+				selection = 0;
+				state = 0;
+			}
+			else {
+				if (strings.stockList[selection] != 0) {
+					if (global.playerstats.gold >= itemInfo.price) {
+						global.playerstats.gold -= itemInfo.price;
+						strings.stockList[selection] -= 1;
+						item_add(strings.buyList[selection]);
+						sfx_play(snd_buy);
+					}
+				}
+			}
+		}
+		break;
 	case 2:
 		if (options.canSell) {
 			writer.writer.internalStr = "";
@@ -149,4 +179,9 @@ switch (state) {
 				break;
 		}
 		break;
+}
+
+if (state != 1) {
+	if (misc.smallBoxY > 0)
+		misc.smallBoxY -= 20;	
 }
