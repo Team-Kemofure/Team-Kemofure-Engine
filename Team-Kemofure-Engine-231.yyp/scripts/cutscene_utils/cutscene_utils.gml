@@ -1,3 +1,11 @@
+function cutscene_create(info) {
+	with (obj_cutscenehandler)
+		sceneInfo = info;
+
+	return info;
+}
+
+
 /// Ends the current cutscene action
 function cutscene_end_action() {
 	with (obj_cutscenehandler) {
@@ -131,6 +139,12 @@ function cutscene_set_music_volume(volume, seconds) {
 	cutscene_end_action();
 }
 
+// This script creates an animation on an instance relatively to the variable's value (Used during cutscenes)
+function cutscene_create_instance_animation(instance, variable, targetValue, curveSubName, seconds) {
+	create_instance_animation(instance, variable, targetValue, curveSubName, seconds);
+	cutscene_end_action(); // End the order
+}
+
 function setMainShopText(internalStr) {
 	with (obj_shop_parent) {
 		writer.writer = instance_create_depth(0, 0, 0, obj_writer);
@@ -140,4 +154,3 @@ function setMainShopText(internalStr) {
 	}
 	cutscene_end_action();
 }
-

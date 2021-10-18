@@ -1,4 +1,4 @@
-/// @description Initialization
+/// @description Initialize
 
 image_index = 0;			// Reset the image index
 image_speed = 0;			// Reset the image speed

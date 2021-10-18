@@ -4,5 +4,6 @@ sceneArray = [
 	[cutscene_run_text, "* Neat, isn't it? * You can even push your#  `cY`limits`cW` with this thing."],
 	[cutscene_run_text, "* Anyways, I have to go. * The world needs me."],
 	[cutscene_play_sfx, snd_slidewhistle],
-	[cutscene_move_character, id, 0, -256, true, 3]
+	[cutscene_create_instance_animation, id, "y", -128, "linear", 2],
+	[cutscene_wait, 2]
 ];

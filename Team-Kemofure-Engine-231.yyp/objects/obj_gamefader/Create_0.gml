@@ -1,4 +1,4 @@
-/// @description Initialization
+/// @description Initialize
 
 event_inherited();
 

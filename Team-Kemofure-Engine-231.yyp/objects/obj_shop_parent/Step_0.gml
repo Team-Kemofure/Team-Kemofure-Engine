@@ -19,7 +19,7 @@ switch (state) {
 		// Confirming an option
 		if (key_enter_press) {
 			subState = 0;
-			if (selection == 1) && (item_get_id(selection) == undefined) 
+			if (selection == 1) && (item_get_id(0) == undefined) 
 				exit; else state = selection + 1;
 			selection = 0;
 			sfx_play(snd_menuselect);

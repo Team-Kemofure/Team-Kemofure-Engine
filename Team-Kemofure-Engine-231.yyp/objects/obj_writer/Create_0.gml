@@ -1,4 +1,4 @@
-/// @description Initialization
+/// @description Initialize
 
 internalStr = "";		// Already written message
 internalPos = 0;		// Written message length

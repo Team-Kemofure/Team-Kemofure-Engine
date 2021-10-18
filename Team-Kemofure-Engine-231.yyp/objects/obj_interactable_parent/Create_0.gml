@@ -1,4 +1,4 @@
-/// @description Initialization
+/// @description Initialize
 
 col = -1;			// The collision object
 sceneArray = -1;	// The entire cutscene order

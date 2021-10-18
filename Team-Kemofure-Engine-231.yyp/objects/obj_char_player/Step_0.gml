@@ -11,7 +11,7 @@ if (global.canmove) {
 			}
 		}
 	}
-	else if (key_enter_press && !global.enable_fading_scene) {
+	else if (key_enter_press && !global.enable_fading_scene && !global.scene) {
 		var _xTL = x - sprite_xoffset;
         var _yTL = y - sprite_yoffset;
         var inst = noone;
@@ -167,8 +167,9 @@ if (global.canmove) {
 // Door collision check!
 if (place_meeting(x, y, obj_door) && global.canmove && !global.enable_fading_scene) {
 	var inst = instance_place(x, y, obj_door);
-	fader = fade_screen(c_black, 0, 1, 0.25, false);
 	targetRoom = inst.targetRoom;
+	
+	fader = fade_screen(c_black, 0, 1, 0.25, targetRoom == rm_shop);
 	
 	global.entrance_on_room_start = inst.targetEntrance;
 	global.direction_on_room_start = inst.targetDirection;

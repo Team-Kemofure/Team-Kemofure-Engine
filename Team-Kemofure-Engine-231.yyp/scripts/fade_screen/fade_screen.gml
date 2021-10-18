@@ -14,7 +14,6 @@ function fade_screen() {
 	fader.fadeMusic = argument[4];				// Fade the music as well?
 	
 	if (fader.fadeMusic)
-		audio_sound_gain(global.currentmusicstream, !fader.target, fader.duration * 1000);
-	
+		music_set_volume(-fader.target + 1, fader.duration);
 	return fader;
 }

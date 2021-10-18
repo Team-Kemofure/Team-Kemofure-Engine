@@ -1,4 +1,4 @@
-/// @description Initialization
+/// @description Initialize
 
 beginFade = fade_screen(c_black, 1, 0, 0.25, true);
 alarm[0] = room_speed / 2;

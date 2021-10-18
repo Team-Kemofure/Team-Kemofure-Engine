@@ -1,4 +1,4 @@
-/// @description Initialization
+/// @description Initialize
 
 active = false;						// Is the menu active?
 mainState = 0;						// The current menu state

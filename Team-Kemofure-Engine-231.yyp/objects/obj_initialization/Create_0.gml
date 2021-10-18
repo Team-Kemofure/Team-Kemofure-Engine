@@ -1,4 +1,4 @@
-/// @description Initialization
+/// @description Initialize
 
 event_user(0);											// For macros and enums
 

@@ -1,4 +1,4 @@
-/// @description Initialization
+/// @description Initialize
 
 state = 0;			// Current state
 delay = 2;			// Box visibility delay

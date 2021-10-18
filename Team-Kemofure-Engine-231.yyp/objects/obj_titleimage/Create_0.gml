@@ -1,4 +1,4 @@
-/// @description Initialization
+/// @description Initialize
 
 visible = false;			// Set the visibility to false
 alarm[0] = room_speed;		// Set the first timer to a second
