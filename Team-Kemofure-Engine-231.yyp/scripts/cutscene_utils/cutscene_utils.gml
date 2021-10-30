@@ -139,6 +139,11 @@ function cutscene_set_music_volume(volume, seconds) {
 	cutscene_end_action();
 }
 
+function cutscene_set_music_pitch(pitch) {
+	music_set_pitch(pitch);
+	cutscene_end_action();
+}
+
 // This script creates an animation on an instance relatively to the variable's value (Used during cutscenes)
 function cutscene_create_instance_animation(instance, variable, targetValue, curveSubName, seconds) {
 	create_instance_animation(instance, variable, targetValue, curveSubName, seconds);

@@ -1,7 +1,7 @@
 /// @description Functionality
 
 var u = key_up_press, d = key_down_press, l = key_left_press, r = key_right_press; // Initialize the keys
-itemEnabled = (ds_list_size(global.playerstats.inventory) > 0);
+itemEnabled = (ds_list_size(global.playerinv) > 0);
 
 // If the menu is not visible, then exit
 if (!active) {
@@ -55,7 +55,7 @@ switch (mainState) {
 		switch (subState) {
 			case 0:
 				var prevSelection = selection;
-				var maxSelection = ds_list_size(global.playerstats.inventory) - 1;
+				var maxSelection = ds_list_size(global.playerinv) - 1;
 				itemSelection = selection;
 				
 				// Selection functionality
@@ -105,9 +105,9 @@ switch (mainState) {
 						case 0:
 							global.textformat = [item_get_name(item), string(hp)];
 							cutscene_create(json_array("owmenu.actions.item.use", global.cutscenejson));
-							obj_cutscenehandler.sceneInfo[2] = [cutscene_run_text, "item.use.heal." + (hp < (global.playerstats.hp[1] - global.playerstats.hp[0]) ? "part" : "all")];
-							if (global.playerstats.hp[0] < global.playerstats.hp[1])
-								global.playerstats.hp[0] = clamp(global.playerstats.hp[0], global.playerstats.hp[0] + hp, global.playerstats.hp[1]);
+							obj_cutscenehandler.sceneInfo[2] = [cutscene_run_text, "item.use.heal." + (hp < (global.playerhpmax - global.playerhp) ? "part" : "all")];
+							if (global.playerhp < global.playerhpmax)
+								global.playerhp = clamp(global.playerhp, global.playerhp + hp, global.playerhpmax);
 							item_remove(itemSelection);
 							break;
 						case 1:

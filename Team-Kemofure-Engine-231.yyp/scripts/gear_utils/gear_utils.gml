@@ -3,13 +3,13 @@
 	/// @param weaponID
 	/// Sets the weapon to the inventory
 	function weapon_set() {
-		global.playerstats.weapon = argument[0];
+		global.playerwep = argument[0];
 	}
 
 	/// @param weaponID
 	/// Removes a weapon from the inventory
 	function weapon_remove() {
-		global.playerstats.weapon = undefined;
+		global.playerwep = undefined;
 	}
 	
 	/// @param weaponID
@@ -39,13 +39,13 @@
 	/// @param armorID
 	/// Sets the weapon to the inventory
 	function armor_set() {
-		global.playerstats.armor = argument[0];
+		global.playerarm = argument[0];
 	}
 
 	/// @param armorID
 	/// Removes a weapon from the inventory
 	function armor_remove() {
-		global.playerstats.armor = undefined;
+		global.playerarm = undefined;
 	}
 	
 	/// @param weaponID

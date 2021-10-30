@@ -12,7 +12,7 @@ scenes = {
 
 // On Return
 returning = {
-	returnRoom : rm_empty,
+	returnRoom : rm_test,
 	returnTargetEntrance : obj_entrance_eid_2,
 	returnTargetDirection : dir_down
 }

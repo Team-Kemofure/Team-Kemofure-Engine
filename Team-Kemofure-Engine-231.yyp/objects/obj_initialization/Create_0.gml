@@ -2,26 +2,23 @@
 
 event_user(0);											// For macros and enums
 
-global.playerstats = {
-	name : "Chara",
-	hp : [20, 20],
-	level : 1,
-	
-	experience : 0,
-	next : 10,
-	gold : 0,
-	
-	weapon : WEAPON.STICK,
-	armor : ARMOR.BANDAGE,
-	
-	attack : 10,
-	weapon_attack : 0,
-	
-	defense : 10,
-	armor_defense : 0,
-	
-	inventory : ds_list_create()
-}
+global.playername = "Chara";
+global.playerhp = 20;
+global.playerhpmax = 20;
+global.playerlv = 1;
+global.playerexp = 0;
+global.playernext = 10;
+global.playergold = 0;
+global.playerwep = WEAPON.STICK;
+global.playerarm = ARMOR.BANDAGE;
+global.playerat = 10;
+global.playerat_wep = 0;
+global.playerdf = 10;
+global.playerdf_arm = 0;
+global.playerinv = ds_list_create();
+global.currentroom = room;
+global.time_seconds = 0;
+global.time_minutes = 0;
 
 // Global variables for other things
 global.scene = false;									// Are we currently in a scene?

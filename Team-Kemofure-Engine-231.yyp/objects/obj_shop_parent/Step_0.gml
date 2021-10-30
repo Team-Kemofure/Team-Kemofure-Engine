@@ -45,8 +45,8 @@ switch (state) {
 			}
 			else {
 				if (strings.stockList[selection] != 0) {
-					if (global.playerstats.gold >= itemInfo.price) {
-						global.playerstats.gold -= itemInfo.price;
+					if (global.playergold >= itemInfo.price) {
+						global.playergold -= itemInfo.price;
 						strings.stockList[selection] -= 1;
 						item_add(strings.buyList[selection]);
 						sfx_play(snd_buy);
@@ -71,7 +71,7 @@ switch (state) {
 					}
 					
 					if (r) {
-						if (selection < ds_list_size(global.playerstats.inventory) - 1)
+						if (selection < ds_list_size(global.playerinv) - 1)
 							selection++;
 					}
 					
@@ -79,11 +79,11 @@ switch (state) {
 						if (selection > 1) && (selection < 8)
 							selection -= 2;
 						else
-							selection = ds_list_size(global.playerstats.inventory) - 1;
+							selection = ds_list_size(global.playerinv) - 1;
 					}
 					
 					if (d) {
-						if (selection < ds_list_size(global.playerstats.inventory) - 2)
+						if (selection < ds_list_size(global.playerinv) - 2)
 							selection += 2;
 						else
 							selection = 8;
@@ -120,10 +120,10 @@ switch (state) {
 						switch (selection) {
 							case 0:
 								var item = item_get_id(prevSelection);
-								global.playerstats.gold += item_get_info(item).price;
+								global.playergold += item_get_info(item).price;
 								item_remove(prevSelection);
 								sfx_play(snd_buy);
-								selection = clamp(selection, 0, ds_list_size(global.playerstats.inventory));
+								selection = clamp(selection, 0, ds_list_size(global.playerinv));
 								break;
 						}
 						if (item_get_id(selection) != undefined) {

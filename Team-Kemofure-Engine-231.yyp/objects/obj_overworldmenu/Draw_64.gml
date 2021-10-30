@@ -17,20 +17,20 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
 draw_set_font(fnt_main);
-draw_text(46, yoff + 61, global.playerstats.name);
+draw_text(46, yoff + 61, global.playername);
 draw_set_font(fnt_crypt);
 
 // LV
 draw_text(46, yoff + 99, json_raw("owmenu.love", global.localization));
-draw_text(82, yoff + 99, string(global.playerstats.level));
+draw_text(82, yoff + 99, string(global.playerlv));
 
 // HP
 draw_text(46, yoff + 117, json_raw("owmenu.hp", global.localization));
-draw_text(82, yoff + 117, format_text_basic(string(global.playerstats.hp[0]) + "/" + string(global.playerstats.hp[1]), false, false));
+draw_text(82, yoff + 117, format_text_basic(string(global.playerhp) + "/" + string(global.playerhpmax), false, false));
 
 // GOLD
 draw_text(46, yoff + 135, json_raw("owmenu.gold", global.localization));
-draw_text(82, yoff + 135, string(global.playerstats.gold));
+draw_text(82, yoff + 135, string(global.playergold));
 
 draw_set_font(fnt_main);
 if (!itemEnabled)
@@ -55,8 +55,8 @@ switch (mainState) {
 				draw_sprite_ext(spr_heartsmall, 0, 208 + (selection == 1 ? 96 : (selection == 2 ? 210 : 0)), 368, 2, 2, 0, c_white, 1); // Draw the heart for indicating the selection
 			
 			draw_set_color(c_white);
-			for (var i = 0; i < ds_list_size(global.playerstats.inventory); i++)
-				draw_text(232, 80 + (32 * i), item_get_name(ds_list_find_value(global.playerstats.inventory, i)));
+			for (var i = 0; i < ds_list_size(global.playerinv); i++)
+				draw_text(232, 80 + (32 * i), item_get_name(ds_list_find_value(global.playerinv, i)));
 			// Item actions
 			draw_text(232, 360, json_array("item.actions", global.localization)[0]);
 			draw_text(328, 360, json_array("item.actions", global.localization)[1]);
@@ -64,24 +64,24 @@ switch (mainState) {
 		}
 		break;
 	case 2:
-		var weapon = weapon_get_info(global.playerstats.weapon);
-		var armor = armor_get_info(global.playerstats.armor);
+		var weapon = weapon_get_info(global.playerwep);
+		var armor = armor_get_info(global.playerarm);
 		
 		draw_menu_rectangle(188, 52, 533, 469, 6); // Initialize the box
 		draw_set_color(c_white);
-		draw_text(216, 85, format_text_basic("\"" + global.playerstats.name + "\"", false, false));
-		draw_text(216, 145, format_text_basic(json_raw("owmenu.love", global.localization) + "  " + string(global.playerstats.level), false, false));
-		draw_text(216, 177, format_text_basic(json_raw("owmenu.hp", global.localization) + "  " + string(global.playerstats.hp[0]) + " / " + string(global.playerstats.hp[1]), false, false));
+		draw_text(216, 85, format_text_basic("\"" + global.playername + "\"", false, false));
+		draw_text(216, 145, format_text_basic(json_raw("owmenu.love", global.localization) + "  " + string(global.playerlv), false, false));
+		draw_text(216, 177, format_text_basic(json_raw("owmenu.hp", global.localization) + "  " + string(global.playerhp) + " / " + string(global.playerhpmax), false, false));
 		
-		draw_text(216, 241, format_text_basic(json_raw("owmenu.at", global.localization) + "  " + string(global.playerstats.attack - 10) + " (" + string(ceil(weapon.strength)) + ")", false, false));
-		draw_text(384, 241, format_text_basic(json_raw("owmenu.exp", global.localization) + ": " + string(global.playerstats.experience), false, false));
+		draw_text(216, 241, format_text_basic(json_raw("owmenu.at", global.localization) + "  " + string(global.playerat - 10) + " (" + string(ceil(weapon.strength)) + ")", false, false));
+		draw_text(384, 241, format_text_basic(json_raw("owmenu.exp", global.localization) + ": " + string(global.playerexp), false, false));
 		
-		draw_text(216, 273, format_text_basic(json_raw("owmenu.df", global.localization) + "  " + string(global.playerstats.defense - 10) + " (" + string(ceil(armor.strength)) + ")", false, false));
-		draw_text(384, 273, format_text_basic(json_raw("owmenu.next", global.localization) + ": " + string(global.playerstats.next), false, false));
+		draw_text(216, 273, format_text_basic(json_raw("owmenu.df", global.localization) + "  " + string(global.playerdf - 10) + " (" + string(ceil(armor.strength)) + ")", false, false));
+		draw_text(384, 273, format_text_basic(json_raw("owmenu.next", global.localization) + ": " + string(global.playernext), false, false));
 		
-		draw_text(216, 333, format_text_basic(json_raw("owmenu.weapon", global.localization) + ": " + string(weapon_get_name(global.playerstats.weapon)), false, false));
-		draw_text(216, 365, format_text_basic(json_raw("owmenu.armor", global.localization) + ": " + string(armor_get_name(global.playerstats.armor)), false, false));
-		draw_text(216, 405, format_text_basic(json_raw("owmenu.gold_alt", global.localization) + ": " + string(global.playerstats.gold), false, false));
+		draw_text(216, 333, format_text_basic(json_raw("owmenu.weapon", global.localization) + ": " + string(weapon_get_name(global.playerwep)), false, false));
+		draw_text(216, 365, format_text_basic(json_raw("owmenu.armor", global.localization) + ": " + string(armor_get_name(global.playerarm)), false, false));
+		draw_text(216, 405, format_text_basic(json_raw("owmenu.gold_alt", global.localization) + ": " + string(global.playergold), false, false));
 		break;
 	case 3:
 		if (subState == 0) {

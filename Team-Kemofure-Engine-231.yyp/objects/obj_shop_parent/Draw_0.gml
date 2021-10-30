@@ -10,7 +10,7 @@ if (state != 2 && state != 4) {
 	
 	draw_set_font(fnt_main);
 	draw_set_color(c_white);
-	global.textformat = [string(ds_list_size(global.playerstats.inventory)), "8"];
+	global.textformat = [string(ds_list_size(global.playerinv)), "8"];
 	draw_text_transformed(288, 216, format_text_basic(json_raw("shopmenu.itemcount", global.localization)), 0.5, 0.5, 0);
 }
 
@@ -54,7 +54,7 @@ switch (state) {
 			case 0:
 				// Initialize the variables
 				var item, itemName, itemInfo, optionString, w;
-				for (var i = 0; i < ds_list_size(global.playerstats.inventory); i++) {
+				for (var i = 0; i < ds_list_size(global.playerinv); i++) {
 					item[i] = item_get_id(i);
 					itemName[i] = item_get_name(item[i]);
 					itemInfo[i] = item_get_info(item[i]);
@@ -104,7 +104,7 @@ switch (state) {
 				break;
 		}
 		draw_set_color(c_yellow);
-		draw_text_transformed(200, 211, "(" + string(global.playerstats.gold) + ")", 0.5, 0.5, 0);
+		draw_text_transformed(200, 211, "(" + string(global.playergold) + ")", 0.5, 0.5, 0);
 		draw_set_color(c_white);
 		break;
 }

@@ -2,19 +2,19 @@
 /// @param itemPos
 /// Gets the item ID from an item position
 function item_get_id() {
-	return ds_list_find_value(global.playerstats.inventory, argument[0]);
+	return ds_list_find_value(global.playerinv, argument[0]);
 }
 
 /// @param itemID
 /// Adds an item to the inventory
 function item_add() {
-	ds_list_add(global.playerstats.inventory, argument[0]);
+	ds_list_add(global.playerinv, argument[0]);
 }
 
 /// @param itemPos
 /// Removes an item from the inventory
 function item_remove() {
-	ds_list_delete(global.playerstats.inventory, argument[0]);
+	ds_list_delete(global.playerinv, argument[0]);
 }
 
 /// @param itemID

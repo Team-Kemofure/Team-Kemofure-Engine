@@ -1,0 +1,1 @@
+draw_text_style(60, 60, "Placeholder Menu##N - New Game#L - Load Game", c_white, fnt_main, 18, 36, 0, 1);
