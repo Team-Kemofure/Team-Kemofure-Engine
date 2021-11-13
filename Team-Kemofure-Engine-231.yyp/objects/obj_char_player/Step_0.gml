@@ -212,4 +212,4 @@ switch (currDir) {
 		break;
 }
 
-depth = (-y + (sprite_height / 2)) * 100;
+depth = -y + (sprite_height / 2);

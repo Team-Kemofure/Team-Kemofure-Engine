@@ -62,19 +62,65 @@ switch (state) {
 					w = string_width(optionString);
 				
 					// Draw the text
-					draw_text_transformed(	40 + (i % 2 != 0 ? (i * 160) : 0),
-											138 + (i % 2 == 0 ? (i * 10) : 0),
-											optionString,
-											(w < 80 ? 0.5 : (80 / w)),
-											0.5,
-											0);
+					if (i < 2) {
+						draw_text_transformed(	40 + (i % 2 != 0 ? (i * 160) : 0),
+												138,
+												optionString,
+												(w < 80 ? 0.5 : (80 / w)),
+												0.5,
+												0);
+					}
+					else if (i < 4) {
+						draw_text_transformed(	40 + (i % 2 != 0 ? 160 : 0),
+												158,
+												optionString,
+												(w < 80 ? 0.5 : (80 / w)),
+												0.5,
+												0);
+					}
+					else if (i < 6) {
+						draw_text_transformed(	40 + (i % 2 != 0 ? 160 : 0),
+												178,
+												optionString,
+												(w < 80 ? 0.5 : (80 / w)),
+												0.5,
+												0);
+					}
+					else if (i < 8) {
+						draw_text_transformed(	40 + (i % 2 != 0 ? 160 : 0),
+												198,
+												optionString,
+												(w < 80 ? 0.5 : (80 / w)),
+												0.5,
+												0);
+					}
 				}
 				
 				if (selection != 8) {
-					draw_sprite(spr_heartsmall,
-								0,
-								25 + (selection % 2 != 0 ? (160 * selection) : 0),
-								142 + (selection % 2 == 0 ? (10 * selection) : 0));
+					if (selection < 1) {
+						draw_sprite(spr_heartsmall,
+									0,
+									25 + (selection % 2 != 0 ? 160 : 0),
+									(selection % 2 == 0 ? 142 : 122));
+					}
+					else if (selection < 3) {
+						draw_sprite(spr_heartsmall,
+									0,
+									25 + (selection % 2 != 0 ? 160 : 0),
+									(selection % 2 == 0 ? 162 : 142));
+					}
+					else if (selection < 5) {
+						draw_sprite(spr_heartsmall,
+									0,
+									25 + (selection % 2 != 0 ? 160 : 0),
+									(selection % 2 == 0 ? 182 : 162));
+					}
+					else if (selection < 7) {
+						draw_sprite(spr_heartsmall,
+									0,
+									25 + (selection % 2 != 0 ? 160 : 0),
+									(selection % 2 == 0 ? 202 : 182));
+					}
 				}
 				else
 					draw_sprite(spr_heartsmall, 0, 15, 215);

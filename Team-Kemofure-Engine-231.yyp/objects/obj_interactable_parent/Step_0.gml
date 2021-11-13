@@ -5,4 +5,4 @@ if (instance_exists(col) || col != -1) {
 	col.y = y + (sprite_height / 2);
 }
 
-depth = (-y + (sprite_height / 2)) * 100;
+depth = -y + (sprite_height / 2);

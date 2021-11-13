@@ -171,6 +171,7 @@ switch (state) {
 				break;
 			case 2: // Initializing the transition to the overworld
 				if (obj_gamefader.completed) {
+					music_stop();
 					room_goto(returning.returnRoom);
 					global.enable_fading_scene = true;
 					global.entrance_on_room_start = returning.returnTargetEntrance;

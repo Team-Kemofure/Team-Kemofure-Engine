@@ -20,7 +20,11 @@ function item_remove() {
 /// @param itemID
 /// Gets the name of an item
 function item_get_name() {
-	return json_raw(argument[0] + ".name", global.localization);
+	switch (argument[0]) {
+		default: return "Nothing"; break;
+		case ITEM.MONSTER_CANDY: return "Monster Candy"; break;
+		case ITEM.BUTTERSCOTCH_PIE: return "Butterscotch Pie"; break;
+	}
 }
 
 /// @param itemID
@@ -28,6 +32,7 @@ function item_get_name() {
 function item_get_info() {
 	switch (argument[0]) {
 		default: return {hp : 0, special : false, price : 0, keyName : undefined}; break;
-		case "item.consumables.monstercandy": return {hp : 10, special : false, price : 3, keyName : "monstercandy"}; break;
+		case ITEM.MONSTER_CANDY: return {hp : 10, special : false, price : 3, keyName : "monstercandy"}; break;
+		case ITEM.BUTTERSCOTCH_PIE: return {hp : 100, special : false, price : 10, keyName : "butterscotch_pie"}; break;
 	}
 }

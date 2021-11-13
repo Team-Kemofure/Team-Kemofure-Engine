@@ -6,13 +6,14 @@ alarm[0] = room_speed / 2;
 state = 0;
 subState = 0;
 selection = 0;
+shopMusic = "shop";
 prevSelection = 0;
 
 strings = {
 	sellingQuestion : "Are you sure that you want to sell this item?",
-	buyList :	["item.consumables.monstercandy", 
-				"item.consumables.monstercandy",
-				"item.consumables.monstercandy"],
+	buyList :	[ITEM.MONSTER_CANDY, 
+				ITEM.MONSTER_CANDY,
+				ITEM.MONSTER_CANDY],
 	stockList : [1, 3, 3]
 }
 
@@ -58,3 +59,7 @@ misc = {
 	mainTextX : 20,
 	mainTextY : 138
 }
+
+music_stop();
+music_load(shopMusic);
+music_play(1, 0.91, true);

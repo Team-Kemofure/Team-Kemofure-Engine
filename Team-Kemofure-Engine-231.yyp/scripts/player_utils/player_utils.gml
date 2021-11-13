@@ -52,30 +52,23 @@ function savegame() {
 function loadgame() {
 	var buffer = buffer_load("file0"), decompressed = buffer_decompress(buffer), array;
 	
-	array = {
-		name : buffer_peek(decompressed, 1, buffer_string),
-		hp : buffer_peek(decompressed, 2, buffer_u16), 
-		hp_max : buffer_peek(decompressed, 3, buffer_u16),
-		level : buffer_peek(decompressed, 4, buffer_u8),
-		
-		experience : buffer_peek(decompressed, 5, buffer_u16),
-		next : buffer_peek(decompressed, 6, buffer_u16),
-		gold : buffer_peek(decompressed, 7, buffer_u32),
-		
-		weapon : buffer_peek(decompressed, 8, buffer_u8),
-		armor : buffer_peek(decompressed, 9, buffer_u8),
-		
-		attack : buffer_peek(decompressed, 10, buffer_u16),
-		weapon_attack : buffer_peek(decompressed, 11, buffer_u16),
-		
-		defense : buffer_peek(decompressed, 12, buffer_u16),
-		armor_defense : buffer_peek(decompressed, 13, buffer_u16),
-		
-		inventory : buffer_peek(decompressed, 14, buffer_u8),
-		currentroom : buffer_peek(decompressed, 15, buffer_u32),
-		time_seconds : buffer_peek(decompressed, 16, buffer_u8),
-		time_minutes : buffer_peek(decompressed, 17, buffer_u32)
-	};
+	array[0] = buffer_read(decompressed, buffer_string);
+	array[1] = buffer_read(decompressed, buffer_u16);
+	array[2] = buffer_read(decompressed, buffer_u16);
+	array[3] = buffer_read(decompressed, buffer_u8);
+	array[4] = buffer_read(decompressed, buffer_u16);
+	array[5] = buffer_read(decompressed, buffer_u16);
+	array[6] = buffer_read(decompressed, buffer_u32);
+	array[7] = buffer_read(decompressed, buffer_u8);
+	array[8] = buffer_read(decompressed, buffer_u8);
+	array[9] = buffer_read(decompressed, buffer_u16);
+	array[10] = buffer_read(decompressed, buffer_u16);
+	array[11] = buffer_read(decompressed, buffer_u16);
+	array[12] = buffer_read(decompressed, buffer_u16);
+	array[13] = buffer_read(decompressed, buffer_u8);
+	array[14] = buffer_read(decompressed, buffer_u32);
+	array[15] = buffer_read(decompressed, buffer_u8);
+	array[16] = buffer_read(decompressed, buffer_u32);
 	
 	return array;
 	buffer_delete(buffer);

@@ -4,7 +4,7 @@ event_inherited();
 
 // Scenes
 scenes = {
-	mainTextScene : [[setMainShopText, "* President of Turkey#  shall be resigned. * Amen."]],
+	mainTextScene : [[setMainShopText, "* Hello, traveler! * What can I do for you?"]],
 	sellingScene : [[setMainShopText, "* Sorry, I don't accept any items."]],
 	defaultTalkingScene : -1,
 	exitingScene : [[setMainShopText, "* Have a good day!"]]
